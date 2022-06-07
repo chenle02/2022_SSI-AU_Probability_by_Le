@@ -28,6 +28,6 @@
 
 # Fun with Probability
 * June 8th, 5:30pm -- 6:30pm.
-* SCA building
+* [Sciences Center Auditorium Building](https://calendar.auburn.edu/sciences_center_auditorium_bldg_603)
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
 
