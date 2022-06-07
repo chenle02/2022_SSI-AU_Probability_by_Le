@@ -10,7 +10,6 @@
 
 ## Attendees
 
-|--------------------------|--------------------------------------------|
 | Name                     | School                                     |
 |--------------------------|--------------------------------------------|
 | Annabel BakerLoveless    | Academic Magnet Program (LAMP High School) |
@@ -30,4 +29,5 @@
 # Fun with Probability
 * June 8th, 5:30pm -- 6:30pm.
 * SCA building
+* Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
 
