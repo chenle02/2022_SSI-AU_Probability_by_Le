@@ -30,7 +30,9 @@
 * June 8th, 5:30pm -- 6:30pm.
 * [Sciences Center Auditorium Building](https://calendar.auburn.edu/sciences_center_auditorium_bldg_603)
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
-## Procedures
+* Slides are here [SSI_Invitation_Probability_Le.pdf](./slides/SSI_Invitation_Probability_Le.pdf).
+
+## Experiment procedures
 * Each one is assigned an ID number.
 * Present the slides.
 * Collecting the DOB via the ID number using [sc-im](https://github.com/andmarti1424/sc-im):
@@ -38,3 +40,4 @@
 sc-im ./slides/codes/DOB.csv
 ```
 * Run [Checking.py](./slides/codes/Checking.py) to check the matching DOBs.
+
