@@ -34,7 +34,7 @@
 * Each one is assigned an ID number.
 * Present the slides.
 * Collecting the DOB via the ID number using [sc-im](https://github.com/andmarti1424/sc-im):
-    ```
+```
 sc-im ./slides/codes/DOB.csv
-    ```
-* Run the program to see the probability.
+```
+* Run [Checking.py](./slides/codes/Checking.py) to check the matching DOBs.
