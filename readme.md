@@ -26,8 +26,8 @@
 | Rex UsryHewitt           | Trussville High School                     |
 | Debora VasconcelosAuburn | High School                                |
 
-# Fun with Probability
-* June 8th, 5:30pm -- 6:30pm.
+# A Invitation to Probability
+* June 8th, 2022, from 5:30pm -- 6:30pm.
 * [Sciences Center Auditorium Building](https://calendar.auburn.edu/sciences_center_auditorium_bldg_603)
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
 * Slides are here [SSI_Invitation_Probability_Le.pdf](./slides/SSI_Invitation_Probability_Le.pdf).
@@ -39,7 +39,8 @@
 ```
 sc-im ./slides/codes/DOB.csv
 ```
-* Run [Checking.py](./slides/codes/Checking.py) to check the matching DOBs.
-* Run [GenDOB.py](./slides/codes/GenDOB.py) to generate random DOBs for years 2005 -- 2007.
+* Run [Checking.py](./slides/codes/Checking.py) to check the matching DOBs from the class.
+* Run [GenDOB.py](./slides/codes/GenDOB.py) to generate random DOBs uniformly distributed in years
+  2005 -- 2007.
 * Run [BatchTest.py](./slides/codes/BatchTest.py) to generate random classes and to see if one can
   recover the theoretical matching probability.

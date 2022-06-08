@@ -30,6 +30,13 @@
     \includegraphics[scale=0.40]{./figs/ForutuneWheel.jpg}
   \end{center}
 \end{frame}
+\begin{frame}[fragile] % COMENTS
+  \frametitle{{\it I Ching} in China ($\sim$ 6th century B.C.)}
+ \begin{center}
+   \includegraphics[scale=0.15]{./figs/IChing-neg.png}
+   \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.}
+ \end{center}
+\end{frame}
 \begin{frame}[fragile] % Democritus
   \frametitle{{\it Democritus} (460 -- 370 BC) \\ --- Father of modern science}
   \begin{center}
@@ -78,7 +85,7 @@
     the National Institute of Standards and Technology}, vol. 101.}.
   \end{center}
 \end{frame}
-\begin{frame}[fragile] % COMENTS
+\begin{frame}[fragile] % Measure probability
   \frametitle{The same for chance}
 
   To measure probability, \pause
@@ -94,7 +101,7 @@
   \end{align*}
 
 \end{frame}
-\begin{frame}[fragile,t] % COMENTS
+\begin{frame}[fragile,t] % Properties of probability
  Now we see that probability has to satisfy the following properties: \pause
 
  \begin{enumerate}
@@ -113,12 +120,38 @@
  \end{align*}
 
 \end{frame}
+\begin{frame}[fragile] % Equi-probable cases
+ \begin{center}
+   How to generate the equi-probable cases?
+ \end{center}
+ \vfill \pause
+ \begin{center}
+   \includegraphics[scale=0.20]{./figs/prism_stick_dice-neg.png}
+   \includegraphics[scale=0.07]{./figs/card-deck.png}
+   \bigskip
+
+   Prim sticks (variations of dice) \footnote{Image is from Bennett (1998), {\it Randomness},
+   Harvard University Press.} and deck of poker...
+ \end{center}
+\end{frame}
+\begin{frame}[fragile] % Girolamo Cardano
+ \begin{center}
+   \includegraphics[scale=0.15]{./figs/Girolamo_Cardano.jpg}
+   \bigskip
+
+   {\it Girolamo Cardano} (1501 -- 1576),  an Italian polymath, whose interests and proficiencies ranged
+   through those of mathematician, physician, biologist, physicist, chemist, astrologer, astronomer,
+   philosopher, writer, and gambler. He was one of the most influential mathematicians of the
+   Renaissance, and was one of the key figures in the foundation of probability and the earliest
+   introducer of the binomial coefficients and the binomial theorem in the Western world.
+ \end{center}
+\end{frame}
 \section{Birthday problem}%
 \begin{frame}[fragile,t] % Problem itself
 	\frametitle{Birthday Problem}
 	{\bf Question:}
   How likely do two students have the same birth day if there are
-	\begin{enumerate}
+	\begin{itemize}
 		\item 2
 		\item 5
 		\item 15
@@ -126,8 +159,16 @@
 		\item 46
 		\item 64
 		\item 366
-	\end{enumerate}
+	\end{itemize}
 	students in the class?
+  \vfill \pause
+
+  Assuming that \pause
+  \begin{enumerate}
+    \item each year has 365 days (i.e., neglecting leap years),
+    \item birthdays are equi-probable,
+    \item birthdays are independent (no twins in the class).
+  \end{enumerate}
 \end{frame}
 \begin{frame}[fragile,t] % Solving
 	\begin{itemize}
@@ -178,8 +219,8 @@
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|}
 			\hline
-			$n$          & \textcolor{gray}{2} & \textcolor{gray}{5} & \textcolor{gray}{15} & \textcolor{gray}{23} & \textcolor{gray}{46} & \textcolor{gray}{64} & \textcolor{gray}{366} \\ \hline
-			$\mathbb(A)$ & \only<2->{0.0027}   & \only<3->{0.0271}   & \only<4->{0.2529}    & \only<5->{0.5073}    & \only<6->{0.9483}    & \only<7->{0.9972}    & \only<1->{1.0}        \\ \hline
+			$n$             & \textcolor{gray}{2} & \textcolor{gray}{5} & \textcolor{gray}{15} & \textcolor{gray}{23} & \textcolor{gray}{46} & \textcolor{gray}{64} & \textcolor{gray}{366} \\ \hline
+      $\mathbb{P}(A)$ & \only<2->{0.0027}   & \only<3->{0.0271}   & \only<4->{0.2529}    & \only<5->{0.5073}    & \only<6->{0.9483}    & \only<7->{0.9972}    & \only<1->{1.0}        \\ \hline
 		\end{tabular}
 
 		\pause
@@ -232,7 +273,7 @@
 \end{frame}
 \begin{frame}[fragile] % Simulations via Python.
   \begin{center}
-    
+
  When time permits, we will try some simulations~! \\
  \bigskip
 
@@ -243,7 +284,7 @@
 \end{frame}
 \section{Rolling three dices}%
 \begin{frame}[fragile] % Questions by Grand Duke
-  \frametitle{A question asked by Grand Duke of Tuscany \\ to Galileo in early seventh century}
+  \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh century}
 
   \begin{quotation}
     Three dice are thrown, such as
@@ -258,7 +299,7 @@
     be more advantageous than  $9$ and $12$. How can this be?
   \end{quotation}
 \end{frame}
-\begin{frame}[fragile,t] % COMENTS
+\begin{frame}[fragile,t] % Dice sums = 9, 10, 11, 12
 \begin{minipage}{0.24\textwidth}
   \vspace{7em}
   \begin{center}
@@ -334,7 +375,7 @@
     18 & = \drawdie{6} + \drawdie{6} + \drawdie{6}                                                                                                                                                                                                                   \\
   \end{align*}
 \end{frame}
-\begin{frame}[fragile,t] % COMENTS
+\begin{frame}[fragile,t] % Three dices with numbers
  \begin{align*}
     3  & = 1 + 1 + 1                                                             \\
     4  & = 1 + 1 + 2                                                             \\
@@ -354,7 +395,7 @@
     18 & = 6 + 6 + 6
  \end{align*}
 \end{frame}
-\begin{frame}[fragile,t] % COMENTS
+\begin{frame}[fragile,t] % Three dices summary of probabilities
 
   \begin{center}
   \renewcommand{\arraystretch}{1.2}
@@ -380,20 +421,63 @@
 
   \end{center}
 \end{frame}
+\begin{frame}[fragile,t] % More history of the game
+
+ \begin{center}
+   Game of rolling three dices dated back to Roman Empire.
+   \bigskip
+   \bigskip
+
+   \includegraphics[scale=0.25]{./figs/216cases.png}
+   \bigskip
+
+   Richard de Fournival discovered in 13th century the summary of                                              \\
+   216 possible sequences \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.} \\
+   in his poem, \textit{\it De Vetula}, written between 1220 to 1250.
+
+
+ \end{center}
+
+\end{frame}
 \section{Poker}%
-\begin{frame}[fragile,t]
+\begin{frame}[fragile,t] % Poker -- Hand rankings
 \begin{center}
 	\includegraphics[scale=0.25]{figs/poker-hand-rankings-small.png}
 \end{center}
 \end{frame}
-\begin{frame}[fragile,t]
+\begin{frame}[fragile,t] % Probabilities -1
 \begin{center}
 	\includegraphics[scale=0.25]{figs/Poker-1.png}
+  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
+  Publishers.}
 \end{center}
 \end{frame}
-\begin{frame}[fragile,t]
+\begin{frame}[fragile,t] % Probabilities - 2
 \begin{center}
 	\includegraphics[scale=0.25]{figs/Poker-2.png}
+  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
+  Publishers.}
 \end{center}
+\end{frame}
+\begin{frame}<3->[fragile,t] % Thank you and references
+  \vfill
+
+ \begin{center}
+   \huge
+
+   Thank you for your \\
+   listening and participating~!
+
+ \end{center}
+ \vfill
+
+ {\noindent \bf References:}\\
+ \begin{itemize}
+   \item Persi Diaconis and Brian Skyrms (2017). {\it The great ideas about chance.} Princeton
+     University Press.
+   \item Deborah J. Bennett (1998). {\it Randomness.} Harvard University Press.
+   \item John D. McGervey (1986). {\it Probabilities in everyday life}. Nelson Hall Publishers.
+ \end{itemize}
+
 \end{frame}
 \end{document}
