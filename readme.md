@@ -26,7 +26,7 @@
 | Rex UsryHewitt           | Trussville High School                     |
 | Debora VasconcelosAuburn | High School                                |
 
-# A Invitation to Probability
+# An Invitation to Probability
 * June 8th, 2022, from 5:30pm -- 6:30pm.
 * [Sciences Center Auditorium Building](https://calendar.auburn.edu/sciences_center_auditorium_bldg_603)
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
