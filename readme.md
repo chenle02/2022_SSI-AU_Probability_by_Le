@@ -32,7 +32,7 @@
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
 * Slides are here [SSI_Invitation_Probability_Le.pdf](./slides/SSI_Invitation_Probability_Le.pdf).
 
-## Experiment procedures
+## Procedures
 * Each one is assigned an ID number.
 * Present the slides.
 * Collecting the DOB via the ID number using [sc-im](https://github.com/andmarti1424/sc-im):
@@ -40,4 +40,6 @@
 sc-im ./slides/codes/DOB.csv
 ```
 * Run [Checking.py](./slides/codes/Checking.py) to check the matching DOBs.
-
+* Run [GenDOB.py](./slides/codes/GenDOB.py) to generate random DOBs for years 2005 -- 2007.
+* Run [BatchTest.py](./slides/codes/BatchTest.py) to generate random classes and to see if one can
+  recover the theoretical matching probability.
