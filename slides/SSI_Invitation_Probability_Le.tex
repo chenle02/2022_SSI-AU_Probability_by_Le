@@ -171,27 +171,26 @@
   \end{enumerate}
 \end{frame}
 \begin{frame}[fragile,t] % Solving
-	\begin{itemize}
-		\item Suppose $n=5$.
-		\item Let $A$ be the \textcolor{magenta}{\bf event} that two students have the same birth day.
-		\item Let $\mathbb(A)$ denote the probability that this event $A$ will happen.
-		\item It is not easy to compute $\mathbb(A)$ directly.
-		\item However, one can compute $\mathbb(A')$, -- the complement of event $A$, namely,
-			\bigskip
-			\begin{center}
-				the probability that no two students have the same birthday, or\\
-				\bigskip
+  \begin{itemize}
+    \item Suppose $n=5$.
+    \item Let $A$ be the event that there is a shared birthday among these $n$ students.
+    % \item Let $\mathbb{P}(A)$ denote the probability that this event $A$ will happen.
+    \item It is not easy to compute $\mathbb{P}(A)$ directly.
+    \item However, one can compute $\mathbb{P}\left(\text{not $A$}\right)$ by counting: \bigskip
+      \begin{center}
+        the probability that no two students have the same birthday, or\\
+        \bigskip
 
 				all students have different birthday,
 			\end{center}
 			\bigskip
-		\item[]	as follows:
+		\item[] is equal to
 			 \begin{align*}
-         \mathbb{P}(A') = \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
+         \mathbb{P}\left(\text{not $A$}\right) = \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
 			\end{align*}
 	\item Hence,
 		\begin{align*}
-      \mathbb{P}(A) = 1 - \mathbb(A') = 1- \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
+      \mathbb{P}(A) = 1 - \mathbb{P}\left(\text{not $A$}\right) = 1- \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
 			\approx 0.027.
 		\end{align*}
 	\end{itemize}
@@ -236,13 +235,14 @@
         % legend style={at={(1.0,0.9)},anchor=north},
         % legend style={draw=none},
         % xmin=-8,
+        xlabel=$n$,
+        ylabel=$\mathbb{P}(A)$,
         xmax=110,
         ymax=1.1,
         ]
         % \addplot[smooth,domain=-9:9,dashed,thin] {0};
 
-        % {{{ Sinc
-        \addplot[domain=-9:9,red,thick,smooth] coordinates {
+        \addplot[domain=-9:9,red,very thick,smooth] coordinates {
           ( 0 , 0.0 )
           ( 5 , 0.0271 )
           ( 10 , 0.1169 )
@@ -264,7 +264,22 @@
           ( 90 , 1.0 )
           ( 95 , 1.0 )
         };
-        % }}}
+       \def\x{15}
+       \def\y{0.2529}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       \def\x{23}
+       \def\y{0.5073}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       \def\x{46}
+       \def\y{0.9483}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       % \def\x{100}
+       % \def\y{1.000}
+       % \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       % \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
     \end{axis}
     \end{tikzpicture}
   \end{center}
