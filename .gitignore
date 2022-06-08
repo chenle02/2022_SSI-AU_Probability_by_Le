@@ -12,4 +12,7 @@
 *.fls
 *.nav
 *.vrb
+*.sc
 test.sh
+
+slides/codes/a.sc
