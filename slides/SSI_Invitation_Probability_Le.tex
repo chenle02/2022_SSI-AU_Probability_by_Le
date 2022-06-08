@@ -297,9 +297,44 @@
  {\tiny\textcolor{gray}{\url{https://github.com/chenle02/2012_Science_Summer_Institute_Auburn_Probability_by_Le}}}
   \end{center}
 \end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{More surprises of this type}
+ \begin{enumerate}
+   \item Let $C$ be the number of categories (i.e., $C=365$) and $n$ be the number of students. Here
+     is one useful approximation:
+     \begin{align*}
+       \text{when $n=1.2 \sqrt{C}$, the chance of shared something is close to $1/2$.}
+     \end{align*}
+   \item[] E.g., $1.2\sqrt{365}=22.9$, $1.2 \sqrt{60}=9.3$ ({\it Watch problem}). \bigskip
+   \item How large should $n$ be to have approximately even probability of a triple birthday match?
+   \item[] Answer: 81. \bigskip
+   \item Would that be a surprise if you find out with someone, not only you share the same
+     birthday, but also the same father's birthday and the same grandfather's birthday?
+   \item[]
+ \end{enumerate}
+\end{frame}
+\begin{frame}[fragile] % Matching birthdays with multiple generations.
+  \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+      Number of generations       & $1$  & $2$              & $3$                & $4$                  & $5$                    \\ \hline
+      $n$ to have about even odds & $23$ & \only<2->{$438$} & \only<3->{$8,368$} & \only<4->{$15,9870$} & \only<5->{$3,054,312$} \\ \hline
+    \end{tabular}
+
+  \end{center}
+\end{frame}
+\begin{codes}
+
+round(1.2*sqrt(365.0),1)
+round(1.2*sqrt(365.0*365.0),1)
+round(1.2*sqrt(365.0*365.0*365.0),1)
+round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
+
+\end{codes}
 \section{Rolling three dices}%
 \begin{frame}[fragile] % Questions by Grand Duke
-  \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh century}
+  \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh
+  century}
 
   \begin{quotation}
     Three dice are thrown, such as
