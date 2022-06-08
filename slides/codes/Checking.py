@@ -19,14 +19,14 @@ import csv
 import sys
 
 
-def CheckMatchingDOBs(file):
+def CheckMatchingDOBs(CSVFile):
     """TODO: Docstring for Check.
 
-    :file: should be opened
-    :returns: TODO
+    :CSVFile: String of the CSV filename.
+    :returns: Number of matching pairs.
 
     """
-    csvreader = csv.reader(file)
+    csvreader = csv.reader(open(CSVFile))
     # header = []
     # header = next(csvreader)
     # print(header)
@@ -53,12 +53,12 @@ def CheckMatchingDOBs(file):
 def main():
     # Parse the input CSV filename.
     if len(sys.argv) < 2:
-        file = open("DOB_Test.csv")
+        CSVFile = "DOB_Test.csv"
         print("Checking the test CSV file: DOB_Test.csv.\n")
     else:
-        file = open(sys.argv[1])
+        CSVFile = sys.argv[1]
 
-    print(f"\nFound {CheckMatchingDOBs(file)} pairs of matching birthdays.")
+    print(f"\nFound {CheckMatchingDOBs(CSVFile)} pairs of matching birthdays.")
 
 
 if __name__ == "__main__":
