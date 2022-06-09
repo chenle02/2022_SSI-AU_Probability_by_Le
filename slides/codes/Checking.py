@@ -53,7 +53,7 @@ def CheckMatchingDOBs(CSVFile):
 def main():
     # Parse the input CSV filename.
     if len(sys.argv) < 2:
-        CSVFile = "DOB_Test.csv"
+        CSVFile = "DOB.csv"
         print("Checking the test CSV file: DOB_Test.csv.\n")
     else:
         CSVFile = sys.argv[1]

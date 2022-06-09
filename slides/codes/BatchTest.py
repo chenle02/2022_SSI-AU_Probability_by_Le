@@ -20,7 +20,7 @@ import math
 
 NumSuccess = 0
 NumTrials = 1000
-NumStudents = 15
+NumStudents = 23
 CSVFile = "Output.csv"
 
 for i in range(NumTrials):
