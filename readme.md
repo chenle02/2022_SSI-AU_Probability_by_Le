@@ -44,3 +44,8 @@ sc-im ./slides/codes/DOB.csv
   2005 -- 2007.
 * Run [BatchTest.py](./slides/codes/BatchTest.py) to generate random classes and to see if one can
   recover the theoretical matching probability.
+
+# License
+
+[License](./LICENSE)
+
