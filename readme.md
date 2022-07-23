@@ -47,5 +47,5 @@ sc-im ./slides/codes/DOB.csv
 
 # License
 
-[License](./LICENSE)
+[CC-BY-SA-4.0](./LICENSE)
 
