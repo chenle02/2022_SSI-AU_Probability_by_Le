@@ -6,7 +6,7 @@
   partners students with experienced AU Science and Math research faculty to explore topics more
   advanced than what is typically taught in a public or private high school environment.
 * For more information regarding Summer Science Institute please contact Mary Lou Ewald,
-  ewaldml@auburn.edu.resented by the College of Sciences and Mathematics
+  [ewaldml@auburn.edu](mailto:ewaldml@auburn.edu) by the College of Sciences and Mathematics
 
 ## Attendees
 
