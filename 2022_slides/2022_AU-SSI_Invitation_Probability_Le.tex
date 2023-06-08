@@ -1,0 +1,533 @@
+ \documentclass[9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+
+\begin{document}
+\begin{frame}[noframenumbering] \titlepage
+\end{frame}
+\begin{frame} \tableofcontents\end{frame}
+\section{What is chance}%
+\begin{frame}[fragile] % What is Chance?
+\begin{center}
+  \huge
+  What is CHANCE?
+\end{center}
+\end{frame}
+\begin{frame}[fragile,t] % Tyche
+  \frametitle{{\it Tyche} -- The Greek goddess of chance}
+  \begin{center}
+    \includegraphics[scale=0.35]{./figs/Tyche.jpg} \quad
+    \includegraphics[scale=0.25]{./figs/Tyche2.jpg}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile] % Fortuna
+  \frametitle{{\it Fortuna} -- The goddess of chance in Roman religion}
+  \begin{center}
+    \includegraphics[scale=0.172]{./figs/Fortuna.jpg} \quad
+    \includegraphics[scale=0.40]{./figs/ForutuneWheel.jpg}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile] % COMENTS
+  \frametitle{{\it I Ching} in China ($\sim$ 6th century B.C.)}
+ \begin{center}
+   \includegraphics[scale=0.15]{./figs/IChing-neg.png}
+   \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.}
+ \end{center}
+\end{frame}
+\begin{frame}[fragile] % Democritus
+  \frametitle{{\it Democritus} (460 -- 370 BC) \\ --- Father of modern science}
+  \begin{center}
+    \includegraphics[scale=0.09]{./figs/Democritus.jpg} \qquad
+    \includegraphics[scale=0.30]{./figs/Democritus2.jpg}
+    \bigskip
+
+
+    Atomic theory of the universe:\\ \bigskip
+
+    A physical chance affecting all the atoms\\
+    that made up the universe.
+  \end{center}
+\end{frame}
+\begin{frame}[fragile] % Gamces of chance
+  \frametitle{Games of chance \\ --- using knucklebones or dice}
+  \begin{center}
+    \includegraphics[scale=0.40]{./figs/Knucklebones2.jpg} \quad
+    \includegraphics[scale=0.172]{./figs/Knucklebones.jpg}
+    \bigskip
+
+    Known to Egyptians, Babylonians, Romans, ...
+  \end{center}
+\end{frame}
+\begin{frame}[fragile] % Conclude -- No theory
+ \begin{center}
+   There was no qualitative theory of chance in these times.
+ \end{center}
+\end{frame}
+\section{How to measure chance}%
+\begin{frame}[fragile] % Question posed
+ \begin{center}
+  \huge
+  How to measure chance?
+ \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % Measure length
+  \frametitle{How about measure length?}
+  \begin{center}
+    \includegraphics[scale=0.20]{./figs/Rood.png}
+    \bigskip
+
+    The determination of a ``right and lawful rood'' or rod in the early sixteenth century in
+    Germany by measuring an essentially random selection of 16 men as they leave church
+    \footnote{Stephen Stigler (1996). Statistics and the Question of Standards, {\em Journal of Research of
+    the National Institute of Standards and Technology}, vol. 101.}.
+  \end{center}
+\end{frame}
+\begin{frame}[fragile] % Measure probability
+  \frametitle{The same for chance}
+
+  To measure probability, \pause
+  \begin{enumerate}
+    \item we first find or make equally probable cases,
+    \item then we count.
+  \end{enumerate}
+  \bigskip \vfill \pause
+
+  The probability of an event $A$, denoted by $\mathbb{P}(A)$, is then
+  \begin{align*}
+    \mathbb{P}(A) = \frac{\text{no. of cases in which $A$ occurs}}{\text{total no. of cases}}.
+  \end{align*}
+
+\end{frame}
+\begin{frame}[fragile,t] % Properties of probability
+ Now we see that probability has to satisfy the following properties: \pause
+
+ \begin{enumerate}
+   \item Probability should be never negative.
+   \item If $A$ occurs in all cases, then  $ \mathbb{P}(A)=1$.
+   \item If $A$ and $B$ never occur in the same case, then
+     \begin{align*}
+       \mathbb{P}\left(\text{$A$ or  $B$}\right) = \mathbb{P}(A) + \mathbb{P}(B).
+     \end{align*}
+ \end{enumerate}
+ \vfill \pause
+
+ In particular, the probability of an event not occurring is equal to
+ \begin{align*}
+   \mathbb{P}(\text{not $A$})  = 1 - \mathbb{P}(A).
+ \end{align*}
+
+\end{frame}
+\begin{frame}[fragile] % Equi-probable cases
+ \begin{center}
+   How to generate the equi-probable cases?
+ \end{center}
+ \vfill \pause
+ \begin{center}
+   \includegraphics[scale=0.20]{./figs/prism_stick_dice-neg.png}
+   \includegraphics[scale=0.07]{./figs/card-deck.png}
+   \bigskip
+
+   Prim sticks (variations of dice) \footnote{Image is from Bennett (1998), {\it Randomness},
+   Harvard University Press.} and deck of poker...
+ \end{center}
+\end{frame}
+\begin{frame}[fragile] % Girolamo Cardano
+ \begin{center}
+   \includegraphics[scale=0.15]{./figs/Girolamo_Cardano.jpg}
+   \bigskip
+
+   {\it Girolamo Cardano} (1501 -- 1576),  an Italian polymath, whose interests and proficiencies ranged
+   through those of mathematician, physician, biologist, physicist, chemist, astrologer, astronomer,
+   philosopher, writer, and gambler. He was one of the most influential mathematicians of the
+   Renaissance, and was one of the key figures in the foundation of probability and the earliest
+   introducer of the binomial coefficients and the binomial theorem in the Western world.
+ \end{center}
+\end{frame}
+\section{Birthday problem}%
+\begin{frame}[fragile,t] % Problem itself
+	\frametitle{Birthday Problem}
+	{\bf Question:}
+  How likely do two students have the same birth day if there are
+	\begin{itemize}
+		\item 2
+		\item 5
+		\item 15
+		\item 23
+		\item 46
+		\item 64
+		\item 366
+	\end{itemize}
+	students in the class?
+  \vfill \pause
+
+  Assuming that \pause
+  \begin{enumerate}
+    \item each year has 365 days (i.e., neglecting leap years),
+    \item birthdays are equi-probable,
+    \item birthdays are independent (no twins in the class).
+  \end{enumerate}
+\end{frame}
+\begin{frame}[fragile,t] % Solving
+  \begin{itemize}
+    \item Suppose $n=5$.
+    \item Let $A$ be the event that there is a shared birthday among these $n$ students.
+    % \item Let $\mathbb{P}(A)$ denote the probability that this event $A$ will happen.
+    \item It is not easy to compute $\mathbb{P}(A)$ directly.
+    \item However, one can compute $\mathbb{P}\left(\text{not $A$}\right)$ by counting: \bigskip
+      \begin{center}
+        the probability that no two students have the same birthday, or\\
+        \bigskip
+
+				all students have different birthday,
+			\end{center}
+			\bigskip
+		\item[] is equal to
+			 \begin{align*}
+         \mathbb{P}\left(\text{not $A$}\right) = \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
+			\end{align*}
+	\item Hence,
+		\begin{align*}
+      \mathbb{P}(A) = 1 - \mathbb{P}\left(\text{not $A$}\right) = 1- \frac{365}{365} \frac{364}{365} \frac{363}{365} \frac{362}{365} \frac{361}{365}
+			\approx 0.027.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+\begin{frame}[fragile] % Table and figure
+	\begin{align*}
+    \mathbb{P}(A) = 1 - \frac{365\times 364 \times\cdots \times(365-n+1)}{365^n}
+	\end{align*}
+
+\begin{codes}
+% Sage
+
+	n=[2, 5, 15, 23, 64, 366]
+	for x in n:
+		round(1- gamma(366)/gamma(366-x)/(365^x)*1.0,4)
+
+	for x in range(20):
+		print("(",x*5, ",", round(1- gamma(366)/gamma(366-x*5)/(365^(x*5))*1.0,4), ")")
+
+\end{codes}
+
+
+	\bigskip
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			$n$             & \textcolor{gray}{2} & \textcolor{gray}{5} & \textcolor{gray}{15} & \textcolor{gray}{23} & \textcolor{gray}{46} & \textcolor{gray}{64} & \textcolor{gray}{366} \\ \hline
+      $\mathbb{P}(A)$ & \only<2->{0.0027}   & \only<3->{0.0271}   & \only<4->{0.2529}    & \only<5->{0.5073}    & \only<6->{0.9483}    & \only<7->{0.9972}    & \only<1->{1.0}        \\ \hline
+		\end{tabular}
+
+		\pause
+		\bigskip
+		\only<8->{
+\begin{center}
+    \begin{tikzpicture}[scale=0.8, transform shape]
+      \begin{axis}[
+        axis lines = left,
+        xtick={0, 15, 23, 46, 64, 100},
+        ytick={0, 0.2529, 0.5073, 0.9483, 0.9972},
+        % yticklabels={$0$, $\frac{1}{2\pi}$, $\frac{2 \sqrt{2}}{3\pi}$, $\frac{1}{2}$},
+        % legend style={at={(1.0,0.9)},anchor=north},
+        % legend style={draw=none},
+        % xmin=-8,
+        xlabel=$n$,
+        ylabel=$\mathbb{P}(A)$,
+        xmax=110,
+        ymax=1.1,
+        ]
+        % \addplot[smooth,domain=-9:9,dashed,thin] {0};
+
+        \addplot[domain=-9:9,red,very thick,smooth] coordinates {
+          ( 0 , 0.0 )
+          ( 5 , 0.0271 )
+          ( 10 , 0.1169 )
+          ( 15 , 0.2529 )
+          ( 20 , 0.4114 )
+          ( 25 , 0.5687 )
+          ( 30 , 0.7063 )
+          ( 35 , 0.8144 )
+          ( 40 , 0.8912 )
+          ( 45 , 0.941 )
+          ( 50 , 0.9704 )
+          ( 55 , 0.9863 )
+          ( 60 , 0.9941 )
+          ( 65 , 0.9977 )
+          ( 70 , 0.9992 )
+          ( 75 , 0.9997 )
+          ( 80 , 0.9999 )
+          ( 85 , 1.0 )
+          ( 90 , 1.0 )
+          ( 95 , 1.0 )
+        };
+       \def\x{15}
+       \def\y{0.2529}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       \def\x{23}
+       \def\y{0.5073}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       \def\x{46}
+       \def\y{0.9483}
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+       % \def\x{100}
+       % \def\y{1.000}
+       % \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,0.02) (\x  ,\y)};
+       % \addplot[thick, samples=50, smooth,domain=0:101, dashed] coordinates {(\x,\y)   (1.50,\y)};
+    \end{axis}
+    \end{tikzpicture}
+  \end{center}
+    }
+	\end{center}
+\end{frame}
+\begin{frame}[fragile] % Simulations via Python.
+  \begin{center}
+
+ When time permits, we will try some simulations~! \\
+ \bigskip
+
+ Source codes are here: \\
+
+ {\tiny\textcolor{gray}{\url{https://github.com/chenle02/2012_Science_Summer_Institute_Auburn_Probability_by_Le}}}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{More surprises of this type}
+ \begin{enumerate}
+   \item Let $C$ be the number of categories (i.e., $C=365$) and $n$ be the number of students. Here
+     is one useful approximation:
+     \begin{align*}
+       \text{when $n=1.2 \sqrt{C}$, the chance of shared something is close to $1/2$.}
+     \end{align*}
+   \item[] E.g., $1.2\sqrt{365}=22.9$ (Birthday problem), $1.2 \sqrt{60}=9.3$ ({\it Watch problem}). \bigskip
+   \item How large should $n$ be to have approximately even probability of a triple birthday match?
+   \item[] Answer: 81. \bigskip
+   \item Would that be a surprise if you find out with someone, not only you share the same
+     birthday, but also the same father's birthday and the same grandfather's birthday?
+   \item[]
+ \end{enumerate}
+\end{frame}
+\begin{frame}[fragile] % Matching birthdays with multiple generations.
+  \begin{center}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+      Number of generations       & $1$  & $2$              & $3$                & $4$                  & $5$                    \\ \hline
+      $n$ to have about even odds & $23$ & \only<2->{$438$} & \only<3->{$8,368$} & \only<4->{$159,870$} & \only<5->{$3,054,312$} \\ \hline
+    \end{tabular}
+
+  \end{center}
+\end{frame}
+\begin{codes}
+
+round(1.2*sqrt(365.0),1)
+round(1.2*sqrt(365.0*365.0),1)
+round(1.2*sqrt(365.0*365.0*365.0),1)
+round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
+
+\end{codes}
+\section{Rolling three dices}%
+\begin{frame}[fragile] % Questions by Grand Duke
+  \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh
+  century}
+
+  \begin{quotation}
+    Three dice are thrown, such as
+    \begin{align*}
+       9: \: \drawdie[scale=2]{6} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{1} \\
+      10: \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{2} \\
+      11: \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{3} \\
+      12: \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{4} \\
+    \end{align*}
+    Counting combinations of numbers, 10 and 11 can be made in 6 ways, as can
+    9 and 12. Yet it is known that long observation has made dice-players consider $10$ and  $11$ to
+    be more advantageous than  $9$ and $12$. How can this be?
+  \end{quotation}
+\end{frame}
+\begin{frame}[fragile,t] % Dice sums = 9, 10, 11, 12
+\begin{minipage}{0.24\textwidth}
+  \vspace{7em}
+  \begin{center}
+    9
+  \end{center}
+  \begin{align*}
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{4} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{3} \\
+  \end{align*}
+\end{minipage}
+\begin{minipage}{0.24\textwidth}
+  \begin{center}
+    10
+  \end{center}
+  \begin{align*}
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{4} \\
+  \end{align*}
+\end{minipage}
+\begin{minipage}{0.24\textwidth}
+  \begin{center}
+    11
+  \end{center}
+  \begin{align*}
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \\
+  \end{align*}
+\end{minipage}
+\begin{minipage}{0.24\textwidth}
+  \vspace{7em}
+  \begin{center}
+    12
+  \end{center}
+  \begin{align*}
+    \drawdie[scale=2]{1} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{2} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{6} \\
+    \drawdie[scale=2]{3} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{5} \\
+    \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \\
+  \end{align*}
+\end{minipage}
+\end{frame}
+\begin{frame}[fragile,t] % Three dices real
+  \begin{align*}
+    3  & = \drawdie{1} + \drawdie{1} + \drawdie{1}                                                                                                                                                                                                                   \\
+    4  & = \drawdie{1} + \drawdie{1} + \drawdie{2}                                                                                                                                                                                                                   \\
+    5  & = \drawdie{1} + \drawdie{1} + \drawdie{3} = \drawdie{1} + \drawdie{2} + \drawdie{2}                                                                                                                                                                         \\
+    6  & = \drawdie{1} + \drawdie{1} + \drawdie{4} = \drawdie{1} + \drawdie{2} + \drawdie{3} = \drawdie{2} + \drawdie{2} + \drawdie{2}                                                                                                                               \\
+    7  & = \drawdie{1} + \drawdie{1} + \drawdie{5} = \drawdie{1} + \drawdie{2} + \drawdie{4} = \drawdie{2} + \drawdie{2} + \drawdie{3} = \drawdie{3} + \drawdie{3} + \drawdie{1}                                                                                     \\
+    8  & = \drawdie{1} + \drawdie{1} + \drawdie{6} = \drawdie{1} + \drawdie{2} + \drawdie{5} = \drawdie{1} + \drawdie{3} + \drawdie{4} = \drawdie{2} + \drawdie{2} + \drawdie{4} = \drawdie{2} + \drawdie{3} + \drawdie{3}                                           \\
+    9  & = \drawdie{1} + \drawdie{2} + \drawdie{6} = \drawdie{1} + \drawdie{3} + \drawdie{5} = \drawdie{1} + \drawdie{4} + \drawdie{4} = \drawdie{2} + \drawdie{2} + \drawdie{5} = \drawdie{2} + \drawdie{3} + \drawdie{4} = \drawdie{3} + \drawdie{3} + \drawdie{3} \\
+    10 & = \drawdie{1} + \drawdie{3} + \drawdie{6} = \drawdie{1} + \drawdie{4} + \drawdie{5} = \drawdie{2} + \drawdie{2} + \drawdie{6} = \drawdie{2} + \drawdie{3} + \drawdie{5} = \drawdie{2} + \drawdie{4} + \drawdie{5} = \drawdie{3} + \drawdie{3} + \drawdie{4} \\
+    11 & = \drawdie{1} + \drawdie{4} + \drawdie{6} = \drawdie{1} + \drawdie{5} + \drawdie{5} = \drawdie{2} + \drawdie{3} + \drawdie{6} = \drawdie{2} + \drawdie{4} + \drawdie{5} = \drawdie{3} + \drawdie{3} + \drawdie{5} = \drawdie{3} + \drawdie{4} + \drawdie{4} \\
+    12 & = \drawdie{1} + \drawdie{5} + \drawdie{6} = \drawdie{2} + \drawdie{4} + \drawdie{6} = \drawdie{2} + \drawdie{5} + \drawdie{5} = \drawdie{3} + \drawdie{3} + \drawdie{6} = \drawdie{3} + \drawdie{4} + \drawdie{5} = \drawdie{4} + \drawdie{4} + \drawdie{4} \\
+    13 & = \drawdie{1} + \drawdie{6} + \drawdie{6} = \drawdie{2} + \drawdie{5} + \drawdie{6} = \drawdie{3} + \drawdie{4} + \drawdie{6} = \drawdie{3} + \drawdie{5} + \drawdie{5} = \drawdie{4} + \drawdie{4} + \drawdie{5}                                           \\
+    14 & = \drawdie{2} + \drawdie{6} + \drawdie{6} = \drawdie{3} + \drawdie{5} + \drawdie{6} = \drawdie{4} + \drawdie{4} + \drawdie{6} = \drawdie{4} + \drawdie{5} + \drawdie{5}                                                                                     \\
+    15 & = \drawdie{3} + \drawdie{6} + \drawdie{6} = \drawdie{4} + \drawdie{5} + \drawdie{6} = \drawdie{5} + \drawdie{5} + \drawdie{5}                                                                                                                               \\
+    16 & = \drawdie{4} + \drawdie{6} + \drawdie{6} = \drawdie{5} + \drawdie{5} + \drawdie{6}                                                                                                                                                                         \\
+    17 & = \drawdie{5} + \drawdie{6} + \drawdie{6}                                                                                                                                                                                                                   \\
+    18 & = \drawdie{6} + \drawdie{6} + \drawdie{6}                                                                                                                                                                                                                   \\
+  \end{align*}
+\end{frame}
+\begin{frame}[fragile,t] % Three dices with numbers
+ \begin{align*}
+    3  & = 1 + 1 + 1                                                             \\
+    4  & = 1 + 1 + 2                                                             \\
+    5  & = 1 + 1 + 3 = 1 + 2 + 2                                                 \\
+    6  & = 1 + 1 + 4 = 1 + 2 + 3 = 2 + 2 + 2                                     \\
+    7  & = 1 + 1 + 5 = 1 + 2 + 4 = 2 + 2 + 3 = 3 + 3 + 1                         \\
+    8  & = 1 + 1 + 6 = 1 + 2 + 5 = 1 + 3 + 4 = 2 + 2 + 4 = 2 + 3 + 3             \\
+    9  & = 1 + 2 + 6 = 1 + 3 + 5 = 1 + 4 + 4 = 2 + 2 + 5 = 2 + 3 + 4 = 3 + 3 + 3 \\
+    10 & = 1 + 3 + 6 = 1 + 4 + 5 = 2 + 2 + 6 = 2 + 3 + 5 = 2 + 4 + 4 = 3 + 3 + 4 \\
+    11 & = 1 + 4 + 6 = 1 + 5 + 5 = 2 + 3 + 6 = 2 + 4 + 5 = 3 + 3 + 5 = 3 + 4 + 4 \\
+    12 & = 1 + 5 + 6 = 2 + 4 + 6 = 2 + 5 + 5 = 3 + 3 + 6 = 3 + 4 + 5 = 4 + 4 + 4 \\
+    13 & = 1 + 6 + 6 = 2 + 5 + 6 = 3 + 4 + 6 = 3 + 5 + 5 = 4 + 4 + 5             \\
+    14 & = 2 + 6 + 6 = 3 + 5 + 6 = 4 + 4 + 6 = 4 + 5 + 5                         \\
+    15 & = 3 + 6 + 6 = 4 + 5 + 6 = 5 + 5 + 5                                     \\
+    16 & = 4 + 6 + 6 = 5 + 5 + 6                                                 \\
+    17 & = 5 + 6 + 6                                                             \\
+    18 & = 6 + 6 + 6
+ \end{align*}
+\end{frame}
+\begin{frame}[fragile,t] % Three dices summary of probabilities
+
+  \begin{center}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{|c|c|c|} \hline
+    k  & Probability of a sum of $k$ & $\approx$ \\ \hline
+    3  & 1/216                       & 0.5\%     \\
+    4  & 3/216                       & 1.4\%     \\
+    5  & 6/216                       & 2.8\%     \\
+    6  & 10/216                      & 4.6\%     \\
+    7  & 15/216                      & 7.0\%     \\
+    8  & 21/216                      & 9.7\%     \\
+    9  & 25/216                      & 11.6\%    \\
+    10 & 27/216                      & 12.5\%    \\
+    11 & 27/216                      & 12.5\%    \\
+    12 & 25/216                      & 11.6\%    \\
+    13 & 21/216                      & 9.7\%     \\
+    14 & 15/216                      & 7.0\%     \\
+    15 & 10/216                      & 4.6\%     \\
+    16 & 6/216                       & 2.8\%     \\
+    17 & 3/216                       & 1.4\%     \\
+    18 & 1/216                       & 0.5\%     \\ \hline
+  \end{tabular}
+
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % More history of the game
+
+ \begin{center}
+   Game of rolling three dices dated back to Roman Empire.
+   \bigskip
+   \bigskip
+
+   \includegraphics[scale=0.25]{./figs/216cases.png}
+   \bigskip
+
+   {\it Richard de Fournival} discovered in 13th century the summary of                                        \\
+   216 possible sequences \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.} \\
+   in his poem, \textit{\it De Vetula}, written between 1220 to 1250.
+
+
+ \end{center}
+
+\end{frame}
+\section{Poker}%
+\begin{frame}[fragile,t] % Poker -- Hand rankings
+\begin{center}
+	\includegraphics[scale=0.25]{figs/poker-hand-rankings-small.png}
+\end{center}
+\end{frame}
+\begin{frame}[fragile,t] % Probabilities -1
+\begin{center}
+	\includegraphics[scale=0.25]{figs/Poker-1.png}
+  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
+  Publishers.}
+\end{center}
+\end{frame}
+\begin{frame}[fragile,t] % Probabilities - 2
+\begin{center}
+	\includegraphics[scale=0.25]{figs/Poker-2.png}
+  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
+  Publishers.}
+\end{center}
+\end{frame}
+\begin{frame}<3->[fragile,t] % Thank you and references
+  \vfill
+
+ \begin{center}
+   \huge
+
+   Thank you for your \\
+   listening and participating~!
+
+ \end{center}
+ \vfill
+
+ {\noindent \bf References:}\\
+ \begin{itemize}
+   \item Persi Diaconis and Brian Skyrms (2017). {\it The great ideas about chance.} Princeton
+     University Press.
+   \item Deborah J. Bennett (1998). {\it Randomness.} Harvard University Press.
+   \item John D. McGervey (1986). {\it Probabilities in everyday life}. Nelson Hall Publishers.
+ \end{itemize}
+
+\end{frame}
+\end{document}
