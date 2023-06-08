@@ -3,6 +3,7 @@
 % \usepackage[utf8]{inputenc}
 % \includeonlyframes{current}
 \input{Common-White}
+% \input{Common}
 \input{Title}
 
 \begin{document}
@@ -31,25 +32,17 @@
   \end{center}
 \end{frame}
 \begin{frame}[fragile] % I Ching
-  \frametitle{{\it I Ching} in China ($\sim$ 6th century B.C.)}
+  \frametitle{{\it I Ching} ($\sim$ 6th century B.C.)\\
+  --- A divination tool in ancient China}
  \begin{center}
    \includegraphics[scale=0.15]{./figs/IChing.png}
    \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.}
+ % \bigskip
+ %
+ %   Predicting outcomes \\
+ %   \&                  \\
+ %   Making decisions in the face of uncertainty.
  \end{center}
-\end{frame}
-\begin{frame}[fragile] % Democritus
-  \frametitle{{\it Democritus} (460 -- 370 BC) \\ --- Father of modern science}
-  \begin{center}
-    \includegraphics[scale=0.09]{./figs/Democritus.jpg} \qquad
-    \includegraphics[scale=0.30]{./figs/Democritus2.jpg}
-    \bigskip
-
-
-    Atomic theory of the universe:\\ \bigskip
-
-    A physical chance affecting all the atoms\\
-    that made up the universe.
-  \end{center}
 \end{frame}
 \begin{frame}[fragile] % Gamces of chance
   \frametitle{Games of chance \\ --- using knucklebones or dice}
@@ -61,6 +54,19 @@
     Known to Egyptians, Babylonians, Romans, ...
   \end{center}
 \end{frame}
+% \begin{frame}[fragile] % Democritus
+%   \frametitle{{\it Democritus} (460 -- 370 BC) \\ --- Father of modern science}
+%   \begin{center}
+%     \includegraphics[scale=0.09]{./figs/Democritus.jpg} \qquad
+%     \includegraphics[scale=0.30]{./figs/Democritus2.jpg} \bigskip
+%
+%
+%     Atomic theory of the universe:\\ \bigskip
+%
+%     A physical chance affecting all the atoms\\
+%     that made up the universe.
+%   \end{center}
+% \end{frame}
 \begin{frame}[fragile] % Conclude -- No theory
  \begin{center}
    There was no qualitative theory of chance in these times.
@@ -97,9 +103,33 @@
 
   The probability of an event $A$, denoted by $\mathbb{P}(A)$, is then
   \begin{align*}
-    \mathbb{P}(A) = \frac{\text{no. of cases in which $A$ occurs}}{\text{total no. of cases}}.
+    \mathbb{P}(A) = \frac{\text{number of cases in which $A$ occurs}}{\text{total number of cases}}.
   \end{align*}
 
+\end{frame}
+\begin{frame}[fragile] % Girolamo Cardano
+ \begin{center}
+
+   \textit{Girolamo Cardano}$^*$ (1501 -- 1576) \\ \bigskip
+
+   \begin{minipage}{ 0.4\textwidth }
+     \includegraphics[scale=0.15]{./figs/Girolamo_Cardano.jpg}
+   \end{minipage}
+   \quad
+   \begin{minipage}{ 0.35\textwidth }
+    \small{* An Italian polymath, whose interests and proficiencies ranged through those of
+      mathematician, physician, biologist, physicist, chemist, astrologer, astronomer, philosopher,
+      writer, and gambler. He was one of the most influential mathematicians of the Renaissance, and
+      was one of the key figures in the foundation of probability and the earliest introducer of the
+    binomial coefficients and the binomial theorem in the Western world.}
+   \end{minipage}
+   \bigskip
+
+   \textcolor{magenta}{\Huge Avid and serious gambler}\\
+   "\textit{Liber de ludo aleae}" {\small(The Book on Games of Chance)} \\
+   \textcolor{cyan}{\Large "equally likely outcomes"}\\
+   {\footnotesize Influencing later thinkers like \textit{Pascal} and \textit{Fermat}}
+ \end{center}
 \end{frame}
 \begin{frame}[fragile,t] % Properties of probability
  Now we see that probability has to satisfy the following properties: \pause
@@ -134,34 +164,20 @@
    Harvard University Press.} and deck of poker...
  \end{center}
 \end{frame}
-\begin{frame}[fragile] % Girolamo Cardano
- \begin{center}
-   \includegraphics[scale=0.15]{./figs/Girolamo_Cardano.jpg}
-   \bigskip
-
-   {\it Girolamo Cardano} (1501 -- 1576),  an Italian polymath, whose interests and proficiencies ranged
-   through those of mathematician, physician, biologist, physicist, chemist, astrologer, astronomer,
-   philosopher, writer, and gambler. He was one of the most influential mathematicians of the
-   Renaissance, and was one of the key figures in the foundation of probability and the earliest
-   introducer of the binomial coefficients and the binomial theorem in the Western world.
- \end{center}
-\end{frame}
 \section{Birthday problem}%
 \begin{frame}<12>[fragile,t] % Problem itself
-	\frametitle{Birthday Problem}
-	{\bf Question:}
-  How likely do two students have the same birth day if there are
-	\begin{itemize}
-		\item 2
-		\item 5
-		\item 15
-		\item 23
-		\item 46
-		\item 64
-		\item 366
-	\end{itemize}
-	students in the class?
-  \vfill \pause
+  \frametitle{Example one: Birthday Problem} {\bf Question:} How likely do two students have the same birth day
+  if there are
+  \begin{itemize}
+    \item 2
+    \item 5
+    \item 15
+    \item 23
+    \item 46
+    \item 64
+    \item 366
+  \end{itemize}
+  students in the class? \vfill \pause
 
   Assuming that \pause
   \begin{enumerate}
@@ -305,33 +321,27 @@
     \begin{center}
       \small \url{https://en.wikipedia.org/wiki/List_of_United_States_urban_areas}
     \end{center}
-    % \begin{tabular}{|C{10em}|c|c|c|c|c|} \hline
-    %   Number of generations                      & $1$  & $2$              & $3$                  & $4$                  & $5$                    \\ \hline
-    %   Size of population to have about even odds & $23$ & \only<2->{$438$} & \only<3->{$8,368$}   & \only<4->{$159,870$} & \only<5->{$3,054,312$} \\ \hline
-    %   Examples                                   &      &                  & Princeton University &                      &                        \\ \hline
-    % \end{tabular}
 
   \end{center}
 \end{frame}
 \section{Rolling three dices}%
 \begin{frame}[fragile] % Questions by Grand Duke
-  \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh
+  \frametitle{Another example: a question by {\it Grand Duke of Tuscany} \\
+    posed to {\it Galileo} in early seventh
   century}
 
   \begin{quotation}
-    Three dice are thrown, such as
+    Three dice are thrown, such as \bigskip
     \begin{align*}
-       9: \: \drawdie[scale=2]{6} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{1} \\
-      10: \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{2} \\
-      11: \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{3} \\
-      12: \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{4} \\
+      \drawdie[scale=2]{6} \: \drawdie[scale=2]{2} \: \drawdie[scale=2]{3} \\ \bigskip
+      \drawdie[scale=2]{5} \: \drawdie[scale=2]{3} \: \drawdie[scale=2]{2} \\ \bigskip
+      \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{3} \\ \bigskip
+      \drawdie[scale=2]{3} \: \drawdie[scale=2]{5} \: \drawdie[scale=2]{4} \\ \bigskip
+      \drawdie[scale=2]{6} \: \drawdie[scale=2]{6} \: \drawdie[scale=2]{6} \\ \bigskip
     \end{align*}
-    Counting combinations of numbers, 10 and 11 can be made in 6 ways, as can
-    9 and 12. Yet it is known that long observation has made dice-players consider $10$ and  $11$ to
-    be more advantageous than  $9$ and $12$. How can this be?
+    Counting combinations of numbers, 10 and 11 can be made in 6 ways, as can 9 and 12:
   \end{quotation}
 \end{frame}
-\end{document}
 \begin{frame}[fragile,t] % Dice sums = 9, 10, 11, 12
 \begin{minipage}{0.24\textwidth}
   \vspace{7em}
@@ -387,6 +397,10 @@
     \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \: \drawdie[scale=2]{4} \\
   \end{align*}
 \end{minipage}
+\begin{quotation}
+     Yet it is known that long observation has made dice-players consider $10$ and $11$ to be more
+     advantageous than $9$ and $12$. How can this be?
+\end{quotation}
 \end{frame}
 \begin{frame}[fragile,t] % Three dices real
   \begin{align*}
@@ -486,10 +500,13 @@
 
  {\noindent \bf References:}\\
  \begin{itemize}
-   \item Persi Diaconis and Brian Skyrms (2017). {\it The great ideas about chance.} Princeton
+   \item Persi Diaconis and Brian Skyrms (2017). \textit{The great ideas about chance.} Princeton
      University Press.
-   \item Deborah J. Bennett (1998). {\it Randomness.} Harvard University Press.
-   \item John D. McGervey (1986). {\it Probabilities in everyday life}. Nelson Hall Publishers.
+   \item Deborah J. Bennett (1998). \textit{Randomness.} Harvard University Press.
+   \item John D. McGervey (1986). \textit{Probabilities in everyday life}. Nelson Hall Publishers.
+   \item Ya. B. Zeldovich, A. A. Ruzmaikin, and D. D. Sokoloff (1987). \textit{The almighty chance}.
+     World Scientific.
  \end{itemize}
 
 \end{frame}
+\end{document}
