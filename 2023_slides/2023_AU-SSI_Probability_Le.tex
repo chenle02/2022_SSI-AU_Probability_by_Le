@@ -1,8 +1,8 @@
- \documentclass[9pt]{beamer}
+\documentclass[9pt]{beamer}
 %\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
 % \usepackage[utf8]{inputenc}
 % \includeonlyframes{current}
-\input{Common}
+\input{Common-White}
 \input{Title}
 
 \begin{document}
@@ -30,10 +30,10 @@
     \includegraphics[scale=0.40]{./figs/ForutuneWheel.jpg}
   \end{center}
 \end{frame}
-\begin{frame}[fragile] % COMENTS
+\begin{frame}[fragile] % I Ching
   \frametitle{{\it I Ching} in China ($\sim$ 6th century B.C.)}
  \begin{center}
-   \includegraphics[scale=0.15]{./figs/IChing-neg.png}
+   \includegraphics[scale=0.15]{./figs/IChing.png}
    \footnote{Image is from Bennett (1998), {\it Randomness}, Harvard University Press.}
  \end{center}
 \end{frame}
@@ -126,7 +126,7 @@
  \end{center}
  \vfill \pause
  \begin{center}
-   \includegraphics[scale=0.20]{./figs/prism_stick_dice-neg.png}
+   \includegraphics[scale=0.20]{./figs/prism_stick_dice.png}
    \includegraphics[scale=0.07]{./figs/card-deck.png}
    \bigskip
 
@@ -147,7 +147,7 @@
  \end{center}
 \end{frame}
 \section{Birthday problem}%
-\begin{frame}[fragile,t] % Problem itself
+\begin{frame}<12>[fragile,t] % Problem itself
 	\frametitle{Birthday Problem}
 	{\bf Question:}
   How likely do two students have the same birth day if there are
@@ -286,51 +286,33 @@
     }
 	\end{center}
 \end{frame}
-\begin{frame}[fragile] % Simulations via Python.
-  \begin{center}
-
- When time permits, we will try some simulations~! \\
- \bigskip
-
- Source codes are here: \\
-
- {\tiny\textcolor{gray}{\url{https://github.com/chenle02/2012_Science_Summer_Institute_Auburn_Probability_by_Le}}}
-  \end{center}
-\end{frame}
-\begin{frame}[fragile,t] % COMENTS
-  \frametitle{More surprises of this type}
- \begin{enumerate}
-   \item Let $C$ be the number of categories (i.e., $C=365$) and $n$ be the number of students. Here
-     is one useful approximation:
-     \begin{align*}
-       \text{when $n=1.2 \sqrt{C}$, the chance of shared something is close to $1/2$.}
-     \end{align*}
-   \item[] E.g., $1.2\sqrt{365}=22.9$ (Birthday problem), $1.2 \sqrt{60}=9.3$ ({\it Watch problem}). \bigskip
-   \item How large should $n$ be to have approximately even probability of a triple birthday match?
-   \item[] Answer: 81. \bigskip
-   \item Would that be a surprise if you find out with someone, not only you share the same
-     birthday, but also the same father's birthday and the same grandfather's birthday?
-   \item[]
- \end{enumerate}
-\end{frame}
 \begin{frame}[fragile] % Matching birthdays with multiple generations.
   \begin{center}
     \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|c|c|c|c|c|c|} \hline
-      Number of generations       & $1$  & $2$              & $3$                & $4$                  & $5$                    \\ \hline
-      $n$ to have about even odds & $23$ & \only<2->{$438$} & \only<3->{$8,368$} & \only<4->{$159,870$} & \only<5->{$3,054,312$} \\ \hline
+    \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+    \begin{tabular}{|C{6em}|C{10em}|C{10em}|} \hline
+      Number of generations & Size of population to have about even odds & Examples (as of 2023)                                                                                                                                                 \\ \hline
+      $1$                   & $23$                                       & A typical class                                                                                                                                                       \\ \hline
+      $2$                   & $438$                                      & ---                                                                                                                                                                   \\ \hline
+      $3$                   & $8,368$                                    & Princeton University\footnote{8,478}                                                                                                                                  \\ \hline
+      $4$                   & $159,870$                                  & Tuscaloosa\footnote{Urban: 139,114, Metro: 235,628}; Auburn\footnote{Metro: 158,991}                                                                                  \\ \hline
+      $5$                   & $3,054,312$                                & Atlanta\footnote{\textcolor{magenta}{Urban: 4,999,259}; Metro: 6,144,050}; Chicago\footnote{\textcolor{magenta}{City: 2,746,388}; Urban: 8,671,746; Metro: 9,618,502} \\ \hline
     \end{tabular}
+
+    \vfill
+
+    Population rank of 500 cities in the United States: \\
+    \begin{center}
+      \small \url{https://en.wikipedia.org/wiki/List_of_United_States_urban_areas}
+    \end{center}
+    % \begin{tabular}{|C{10em}|c|c|c|c|c|} \hline
+    %   Number of generations                      & $1$  & $2$              & $3$                  & $4$                  & $5$                    \\ \hline
+    %   Size of population to have about even odds & $23$ & \only<2->{$438$} & \only<3->{$8,368$}   & \only<4->{$159,870$} & \only<5->{$3,054,312$} \\ \hline
+    %   Examples                                   &      &                  & Princeton University &                      &                        \\ \hline
+    % \end{tabular}
 
   \end{center}
 \end{frame}
-\begin{codes}
-
-round(1.2*sqrt(365.0),1)
-round(1.2*sqrt(365.0*365.0),1)
-round(1.2*sqrt(365.0*365.0*365.0),1)
-round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
-
-\end{codes}
 \section{Rolling three dices}%
 \begin{frame}[fragile] % Questions by Grand Duke
   \frametitle{A question asked by {\it Grand Duke of Tuscany} \\ to {\it Galileo} in early seventh
@@ -349,6 +331,7 @@ round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
     be more advantageous than  $9$ and $12$. How can this be?
   \end{quotation}
 \end{frame}
+\end{document}
 \begin{frame}[fragile,t] % Dice sums = 9, 10, 11, 12
 \begin{minipage}{0.24\textwidth}
   \vspace{7em}
@@ -489,26 +472,6 @@ round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
  \end{center}
 
 \end{frame}
-\section{Poker}%
-\begin{frame}[fragile,t] % Poker -- Hand rankings
-\begin{center}
-	\includegraphics[scale=0.25]{figs/poker-hand-rankings-small.png}
-\end{center}
-\end{frame}
-\begin{frame}[fragile,t] % Probabilities -1
-\begin{center}
-	\includegraphics[scale=0.25]{figs/Poker-1.png}
-  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
-  Publishers.}
-\end{center}
-\end{frame}
-\begin{frame}[fragile,t] % Probabilities - 2
-\begin{center}
-	\includegraphics[scale=0.25]{figs/Poker-2.png}
-  \footnote{Image from John D. McGervey (1986), {\it Probabilities in everyday life}, Nelson Hall
-  Publishers.}
-\end{center}
-\end{frame}
 \begin{frame}<3->[fragile,t] % Thank you and references
   \vfill
 
@@ -530,4 +493,3 @@ round(1.2*sqrt(365.0*365.0*365.0*365.0),2)
  \end{itemize}
 
 \end{frame}
-\end{document}
