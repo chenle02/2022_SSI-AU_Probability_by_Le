@@ -1,8 +1,9 @@
-\documentclass[9pt]{beamer}
+\documentclass[9pt,xcolor=dvipsnames,table]{beamer}
 %\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
 % \usepackage[utf8]{inputenc}
 % \includeonlyframes{current}
 \input{Common-White}
+\usepackage{pgffor}
 % \input{Common}
 \input{Title}
 
@@ -164,7 +165,7 @@
    Harvard University Press.} and deck of poker...
  \end{center}
 \end{frame}
-\section{Birthday problem}%
+\subsection{Example one: Birthday problem}%
 \begin{frame}<12>[fragile,t] % Problem itself
   \frametitle{Example one: Birthday Problem} {\bf Question:} How likely do two students have the same birth day
   if there are
@@ -324,7 +325,7 @@
 
   \end{center}
 \end{frame}
-\section{Rolling three dices}%
+\subsection{Example two: Rolling three dices}%
 \begin{frame}[fragile] % Questions by Grand Duke
   \frametitle{Another example: a question by {\it Grand Duke of Tuscany} \\
     posed to {\it Galileo} in early seventh
@@ -484,7 +485,260 @@
 
 
  \end{center}
+\end{frame}
+\section{Intermittency}
+\begin{frame}[fragile,t] % Example 1.
+  \frametitle{\textcolor{cyan!50!black}{Additive} v.s. \textcolor{magenta!50!black}{Multiplicative}}
 
+  \begin{center}
+    Let $X_n$ be independent Bernoulli random variables with
+    \begin{align*}
+      \mathbb{P}(X_n=4)=\mathbb{P}(X_n=0)\sfrac{=1}{2}.
+    \end{align*}
+  \end{center}
+  \bigskip \bigskip
+
+  \begin{center}
+     \begin{tikzpicture}
+       \node[color = cyan!50!black, draw] (Add) at (0,0) {$\Sigma_n=X_1+X_2+\cdots+X_n$};
+       \node[color = magenta!50!black, draw] (Mul) at (5.6,0) {$S_n=X_1 \times X_2 \times \cdots \times X_n$};
+       \pause
+
+       \node[below of = Add, yshift = -4em] (CLT) {$\dfrac{\Sigma_n - \E(\Sigma_n)}{\sqrt{\mathop{Var}(\Sigma_n)}} \to N(0,1)$};
+       \pause
+
+       \node[below of = Mul, yshift = -1em] (a) {$\mathbb{P}\left(S_n =2^{2n}\right) = \dfrac{1}{2^n}$};
+       \node[below of = a] (b) {$\mathbb{P}\left(S_n =0\right) = 1-\dfrac{1}{2^n}$};
+       \node[below of = b] (c) {$\E\left[S_n\right]=2^{2n}\times \dfrac{1}{2^n} + 0\times \left(1-\dfrac{1}{2^{n}}\right) =2^n$};
+     \end{tikzpicture}
+   \end{center}
+\end{frame}
+\begin{frame}[fragile] % List of simulations -- I
+
+  \frametitle{Embracing Randomness via Simulations \\ \bigskip --- Part I without interactions}
+
+ \begin{enumerate}
+   \item Brownian motion on $\R$             \bigskip
+   \item Exponential Brownian motion on $\R$ \bigskip
+   \item Random walk on $\mathbb{Z}^2$       \bigskip
+   \item Random walk on $\mathbb{R}^2$       \bigskip
+ \end{enumerate}
+\end{frame}
+\begin{frame}[fragile] % List of simulations -- II
+
+  \frametitle{Embracing Randomness via Simulations \\ \bigskip --- Part II with interactions}
+
+ \begin{enumerate}
+   \item Self avoiding random walk on $\mathbb{Z}^2$ \bigskip
+   \item Random walk in a random environment on $\mathbb{Z}^2$ \bigskip
+ \end{enumerate}
+\end{frame}
+\begin{frame}[fragile,t] %  1 Matthew effect
+  \frametitle{Matthew Effect}
+  \begin{center}
+   The rich get richer and the poor get poorer.
+  \end{center}
+  \bigskip
+  \mySeparateLine
+  \bigskip
+  \begin{center}
+    \begin{minipage}{0.7\textwidth}
+      \begin{quotation}
+
+        For to every one who has will more be given, and he will have abundance; but
+        from him who has not, even what he has will be taken away.
+
+        \bigskip
+        \hfill --- {\it Matthew} 25:29, RSV.
+
+      \end{quotation}
+    \end{minipage}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % Zeldovich
+  \frametitle{Intermittency}
+
+  \begin{quotation}
+    Intermittency is a very universal phenomenon which occurs practically
+    irrespective of detailed properties of the background instability in a
+    random medium provided only that the random field is of multiplicative
+    type, ... \\
+    \bigskip
+
+    \begin{flushright}
+      {\small Zeldovich {\it et al.} {\bf The almighty chance}. 1990}
+    \end{flushright}
+    \end{quotation}
+  \bigskip
+  \mySeparateLine
+  \bigskip
+  \bigskip
+
+  \begin{center}
+    High peaks $+$ highly concentrated on small islands $\bigg|$ multiplicative noise
+  \end{center}
+\end{frame}
+\begin{frame} % Tug war for SHE
+
+  \frametitle{Tug war for stochastic heat equation (SHE)}
+\[\left(\displaystyle\frac{\partial}{\partial t}
+-\frac{1}{2}\Delta \right) u(t,x) =
+\rho(u(t,x))  \dot{W}(t,x)\]
+\vspace{-1.8em}
+ \begin{center}
+  \includegraphics[scale=0.4]{figs/picture-tug-war2.jpg}
+  % \includegraphics[scale=0.2]{figs/tug_war.png}
+  \vfill
+  \begin{tabular}{ c c c  }
+    $\Delta$  &  & $\rho(u)\dot{W}$ \\ [0.5em] \hline \\
+    Smoothing &  & Roughening       \\
+  \end{tabular}
+ \end{center}
+\end{frame}
+\begin{frame}[fragile,label=SHE] % 3. Mindmap for SHE
+\tikzset{
+  set angles for level/.style={level #1/.append style={sibling angle=360/\the\tikznumberofchildren}},
+  level/.append style={set angles for level=#1}}
+\tikzset{level 1 concept/.append style={font=\sf, sibling angle=90,level distance = 25mm}}
+\tikzset{level 2 concept/.append style={font=\sf, sibling angle=45,level distance = 15mm}}
+\tikzset{level 3 concept/.append style={font=\sf, sibling angle=45,level distance = 15mm}}
+\tikzset{every node/.append style={scale=0.6}}
+\tikzset{
+    invisible/.style={opacity=0},
+    visible on/.style={alt={#1{}{invisible} }},
+    alt/.code args={<#1>#2#3}{%
+      \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+    },
+  }
+\begin{center}
+ \begin{tikzpicture}[scale=1.26]
+  \path[mindmap,concept color=black,text=white]
+    node[concept,visible on=<1->] {Stochastic\\ Heat Equation\\ $u(t,x)$}
+    [clockwise from=0]
+    child[concept color=green!30!black,visible on=<6->] {
+      node[concept] {Particle systems} [clockwise from=120,sibling angle=30]
+      child { node[concept] {(T)ASEP, \\ WASEP}
+       }
+       child { node[concept] {Exactly Solvable Model}}
+       child { node[concept] {Tracy-Widom distr. }[clockwise from=0,sibling angle=30]
+       child { node[concept] {Painlev\'e tran.\\
+       Random matrix}}
+       }
+    }
+    child[concept color=blue!30!black,visible on=<7->] {
+      node[concept] {Parabolic Anderson Model}
+      [clockwise from=3]
+      child { node[concept] {Localization \& Intermittency} }
+      child { node[concept] {Random Polymer Models} }
+    }
+    child[concept color=red!30!black,visible on=<2->] { node[concept] (KPZ) {Kardar-Parisi-Zhang (KPZ) Eq.}
+    [clockwise from=182,sibling angle=-90]
+      child { node[concept] {Surface growth model} }
+      child { node[concept] {Hairer's Regularity Structure} }
+    }
+    child[concept color=red!30!black,visible on=<3->] { node[concept] (Burgers) {Stochastic Burgers' Eq.}
+    [clockwise from=150]
+      child { node[concept] {Stratified structure of the Universe} }}
+    child[concept color=orange!30!black,visible on=<5->] { node[concept] {Mathematical biology}[clockwise from=-1]
+      child { node[concept] {Dawson-Watanabe superprocess}}
+      child { node[concept] {Kolmogorov-Petrovsky-Piskunov Eq. with noise}}
+    };
+  \node[circle,extra concept,text=white,concept color=red!60!black,visible on=<4->] (additional) at ($(Burgers)!0.5!(KPZ)+(-0.4,0)$) {Cole-Hopf \\Transform\\ $\log u(t,x)$};
+  % \draw[ultra thick,red,visible on=<4->] (additional) -- (KPZ);
+  % \draw[ultra thick,red,visible on=<4->] (additional) -- (Burgers);
+  \path[visible on =<4->] (additional) to[circle connection bar switch color=from (red!60!black) to (red!30!black)] (KPZ);
+  \path[visible on =<4->] (additional) to[circle connection bar switch color=from (red!60!black) to (red!30!black)] (Burgers);
+\end{tikzpicture}
+\end{center}
+\end{frame}
+\begin{frame}[fragile] % List of simulations -- II
+
+  \frametitle{Embracing Randomness via Simulations \\ \bigskip --- Part III SHE}
+
+ \begin{enumerate}
+   \item Stochastic heat equation in an interval\bigskip
+   \item Stochastic heat equation on $\R$ with localized initial data\bigskip
+ \end{enumerate}
+\end{frame}
+\begin{frame}[fragile] % Surface growth -- DMS
+  \frametitle{Study of growing interfaces in a thin film \\
+    \small --- Convection of nematic liquid crystal \footnote{
+      \textcolor{refcolor}{K. Takeuchi, M. Sano, T. Sasamoto {\it et al}}. {\it Sci. Rep. (Nature)}, 1, 34 (2011).
+      % Growing interfaces uncover universal fluctuations behind scale invariance.
+  }}
+
+  \begin{center}
+    \only<1>{Show movies~!}
+    \only<2>{
+      \includegraphics[scale=0.08]{./figs/Growing-DSM2.png}
+
+      \vfill
+      Prediction from KPZ equation:
+      \begin{align*}
+        h\asymp v_\infty t + \left(\Gamma t\right)^{1/3} \xi
+      \end{align*}
+    }
+    \only<3>{
+      \begin{align*}
+        h\asymp v_\infty t + \left(\Gamma t\right)^{1/3} \xi
+      \end{align*}
+      \bigskip
+
+      \includegraphics[scale=0.12]{./figs/Universal_Fluctuations_DSM.png}
+    }
+  \end{center}
+
+\end{frame}
+\begin{frame}[fragile] % KPZ three authors' photos
+  \frametitle{KPZ Equation '86 \footnote{"Dynamic Scaling of Growing Interfaces". Physical Review
+  Letters. 56 (9): 889--892, 1986.}}
+
+  \begin{center}
+    \includegraphics[scale=0.22]{figs/Kardar.jpg}
+    \includegraphics[scale=0.20]{figs/Parisi.jpg}
+    \includegraphics[scale=0.28]{figs/Zhang.jpg}
+  \end{center}
+
+  \small
+  \quad Mehran Kardar (1957 --) \:\:  Giorgio Parisi (1948 --) \qquad\qquad Yicheng Zhang
+\end{frame}
+\begin{frame}[fragile] % Parisi -- Nobel
+ \begin{center}
+  \includegraphics[scale=0.15]{figs/Parisi.png}
+  \bigskip
+
+  \small
+  \url{https://www.nobelprize.org/prizes/physics/2021/parisi/facts/}
+   % \begin{tikzpicture}[scale=1, transform shape]
+   %   \node (fig) at (0,0) {};
+   %   \pause
+   %   \draw[red] (-3,-0.33) rectangle ++(6,+3) node [right] {Group $X$};
+   %   \pause
+   %   \draw[red] (-3,-0.36) rectangle ++(6,-3) node [right] {Group $Y$};
+   % \end{tikzpicture}
+ \end{center}
+\end{frame}
+\begin{frame}<4>[fragile] % Hairer
+  \begin{minipage}{0.3\textwidth}
+  \includegraphics[scale=0.11]{figs/Martin_Hairer.png}
+  \end{minipage}
+  \begin{minipage}{0.65\textwidth}
+    \pause
+    \begin{itemize}
+      \small
+      \item \textcolor{refcolor}{M. Hairer}. Solving the KPZ equation. {\it Annals of Mathematics}, vol. 178, 2013.
+        \bigskip
+      \item \textcolor{refcolor}{M. Hairer}. A theory of regularity structures. {\it Inventiones mathematicae}, vol. 198, 2014.
+        \bigskip
+        \mySeparateLine
+        \bigskip
+      \item[]
+        \begin{center}
+          \Large
+          Fields Medal in 2014
+        \end{center}
+    \end{itemize}
+  \end{minipage}
 \end{frame}
 \begin{frame}<3->[fragile,t] % Thank you and references
   \vfill
@@ -508,5 +762,83 @@
      World Scientific.
  \end{itemize}
 
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Chaotic stochastic heat flow on a torus...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Chaotic_stochastic_heat_flow_on_a_torus.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Law of large numbers and central limit theorem...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Law_of_large_numbers_and_central_limit_theorem.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Stochastic heat equation...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Stochastic_heat_equation.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Intermittency parabolic Anderson model Brownian motion...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Intermittency_parabolic_Anderson_model_Brownian_motion.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{A gitar placed in the sand storm in a desert show...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_A_gitar_placed_in_the_sanddust_storm_in_a_desert_show.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Show rain drops on a small pond in a foggy raining day...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Show_rain_drops_on_a_small_pond_in_a_foggy_raining_day.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Lightning clouds dramatic light zigzag highly detailed...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Lightningclouds_dramatic_light_zigzag_highly_detailed.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Mushrooms in clusters in a forest with sun shades...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Mushrooms_in_clusters_in_a_forest_with_sun_shades_ultr.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Was it nuclear explosionor cosmic forces beyond comprehension...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Was_it_nuclear_explosionor_cosmic_forces_beyond_comprehension.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Standing on the planet Mars looking at home the earth...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Standing_on_the_planet_Mars_looking_at_home_the_earth.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{A homesick guy looking back to earth from Mars...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_A_homesick_guy_looking_back_to_Earch_from_Mars_cinemar.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{A person in front of the whole universe gallaxies...}
+  \begin{center}
+    \includegraphics[scale=0.15]{./figs/chenle02_A_person_in_front_of_the_whole_universe_gallaxies.png}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile,t] % COMENTS
+  \frametitle{Cosmic forces beyond comprehension...}
+  \begin{center}
+    \includegraphics[scale=0.22]{./figs/chenle02_Cosmic_forces_beyond_comprehension.png}
+  \end{center}
 \end{frame}
 \end{document}

@@ -1,16 +1,37 @@
 % \usepackage{dbt}
 \setbeamercovered{dynamic}
 \usepackage{etex}
+\usepackage{multirow}
+\usepackage{amsmath}
 \usepackage{graphicx,url,psfrag}
 \usepackage{tikz}
-\usetikzlibrary{decorations.pathreplacing,calc,decorations.fractals,through,shapes,patterns,arrows.meta,decorations.pathreplacing,arrows,shapes}
-% \usepackage[center]{subfigure}
+\usetikzlibrary{
+  arrows,
+  arrows.meta,
+  calc,
+  decorations.fractals,
+  decorations.pathreplacing,
+  graphs,
+  mindmap,
+  positioning,
+  shapes.geometric,
+  through,shapes,patterns,
+  trees,
+  positioning
+  }
+\usepackage{smartdiagram}
+\usesmartdiagramlibrary{additions}
+\usepackage[center]{subfigure}
 \usepackage{enumerate}
 \usepackage[makeroom]{cancel}
 \usepackage{mathtools}
 \usepackage{graphbox}
 \usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
 \usepackage{comment}
+\usepackage{xfrac}
+\usepackage{pgfplots}
 \excludecomment{codes}
 % \usepackage{movie15}
 % \usepackage[showframe]{geometry}
@@ -158,6 +179,7 @@
 \newcommand{\Floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\sgn}{\text{sgn}}
 \newcommand{\Lad}{\text{L}_{\text{ad}}^2}
+\newcommand{\SI}[1]{\mathcal{I}\left[#1 \right]}
 \newcommand{\SIB}[2]{\mathcal{I}_{#2}\left[#1 \right]}
 \newcommand{\Indt}[1]{1_{\left\{#1 \right\}}}
 \newcommand{\LadInPrd}[1]{\left\langle #1 \right\rangle_{\text{L}_\text{ad}^2}}
@@ -177,8 +199,12 @@
 
 \newcommand{\baseurl}[1]{\footnotesize\url{http://math.emory.edu/~lchen41/teaching/2020_Spring/#1}}
 
-
-\newcommand*\mystrut[1]{\vrule width0pt height0pt depth#1\relax} % adding vertical space
+\def\bD{\mathbb{D}}
+\def\bR{\mathbb{R}}
+\def\bC{\mathbb{C}}
+\def\e{\varepsilon}
+\def\E{\mathbb{E}}
+\def\P{\mathbb{P}}
 
 \DeclareMathOperator{\esssup}{\ensuremath{ess\,sup}}
 
@@ -209,6 +235,22 @@
 \newcommand{\sincos}{\begin{array}{c} \cos \\ \sin \end{array}\!\!}
 \newcommand{\CvBc}[1]{\left\{\:#1\:\right\}}
 \newcommand*{\one}{{{\rm 1\mkern-1.5mu}\!{\rm I}}}
+\def\e{{\rm e}}
+\def\cA{\mathcal{A}}
+\def\cB{\mathcal{B}}
+\def\cC{\mathcal{C}}
+\def\cD{\mathcal{D}}
+\def\cE{\mathcal{E}}
+\def\cF{\mathcal{F}}
+\def\cG{\mathcal{G}}
+\def\cH{\mathcal{H}}
+\def\cI{\mathcal{I}}
+\def\cL{\mathcal{L}}
+\def\cM{\mathcal{M}}
+\def\cP{\mathcal{P}}
+\def\cQ{\mathcal{Q}}
+\def\cS{\mathcal{S}}
+\def\cU{\mathcal{U}}
 
 \newcommand{\OneFrame}[1]{
 \begin{enumerate}\item[#1] \phantom{av} \\[20em]\vfill\phantom{av}\myEnd\end{enumerate}}
@@ -229,6 +271,10 @@
 \newcommand{\mySeparateLine}{\begin{center}
  \makebox[\linewidth]{\rule{0.6\paperwidth}{0.4pt}}
 \end{center}}
+\newcommand{\myfootnoteline}{\noindent\rule{0.3\textwidth}{0.4pt}\\ \bigskip}
+\newcommand*{\TakeFourierOrnament}[1]{{%
+\fontencoding{U}\fontfamily{futs}\selectfont\char#1}}
+\newcommand*{\danger}{\TakeFourierOrnament{66}}
 
 \theoremstyle{definition}
 % \newtheorem{definition}[theorem]{Definition}
@@ -360,7 +406,7 @@
 \setbeamercolor{alerted text}{fg=red}
 % \setbeamercolor{block title}{bg=background,fg=lgtblue}
 
-\setbeamercolor{section in toc}{fg=yellow}
+\setbeamercolor{section in toc}{fg=black}
 \setbeamercolor{subsection in toc}{fg=red}
 
 % \newtheorem{myexample}{\it Example}[section]
