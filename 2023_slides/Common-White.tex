@@ -309,6 +309,19 @@
 \usefoottemplate{\hfill \insertframenumber{}}
 % \inserttotalframenumber
 
+
+% Remove the negation symbols
+\setbeamertemplate{navigation symbols}{} % remove navigation symbols
+
+\def\shifpagenumber{13}
+\setbeamertemplate{footline}{%
+  \hfill%
+  \insertframenumber\,/\,\the\numexpr\inserttotalframenumber-\shifpagenumber\relax\, {(+ \shifpagenumber)}%
+  \hspace*{0.3cm}%
+  \vspace{0.07cm}%
+}
+% \inserttotalframenumber
+
 \usepackage[english]{babel}
 % or whatever
 
@@ -484,3 +497,4 @@
 \fi
 \end{tikzpicture}%
 }
+

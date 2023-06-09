@@ -524,15 +524,6 @@
    \item Random walk on $\mathbb{R}^2$       \bigskip
  \end{enumerate}
 \end{frame}
-\begin{frame}[fragile] % List of simulations -- II
-
-  \frametitle{Embracing Randomness via Simulations \\ \bigskip --- Part II with interactions}
-
- \begin{enumerate}
-   \item Self avoiding random walk on $\mathbb{Z}^2$ \bigskip
-   \item Random walk in a random environment on $\mathbb{Z}^2$ \bigskip
- \end{enumerate}
-\end{frame}
 \begin{frame}[fragile,t] %  1 Matthew effect
   \frametitle{Matthew Effect}
   \begin{center}
@@ -577,6 +568,15 @@
   \begin{center}
     High peaks $+$ highly concentrated on small islands $\bigg|$ multiplicative noise
   \end{center}
+\end{frame}
+\begin{frame}[fragile] % List of simulations -- II
+
+  \frametitle{Embracing Randomness via Simulations \\ \bigskip --- Part II with interactions}
+
+ \begin{enumerate}
+   \item Self avoiding random walk on $\mathbb{Z}^2$ \bigskip
+   \item Random walk in a random environment on $\mathbb{Z}^2$ \bigskip
+ \end{enumerate}
 \end{frame}
 \begin{frame}{Intermittency\\ {\small (Zeldovich {\it et al.} The almighty chance. 1990})} % Intermittency
   \includegraphics[scale=0.35]{figs/space-stars-galaxy.jpg}\hfill
@@ -666,6 +666,54 @@
    \item Stochastic heat equation on $\R$ with localized initial data\bigskip
  \end{enumerate}
 \end{frame}
+\begin{frame}[fragile,t] % Surface growth -- Cell
+  \frametitle{Surface growth}
+
+  \begin{center}
+    Rule of replication of \textcolor{cyan!80!black}{\bf cells}
+    \footnote{
+      \textcolor{refcolor}{S. Santalla and S. Ferreira}.
+    % Eden model with nonlocal growth rules and kinetic roughening in biological systems.
+    {\it  Phys. Rev. E.} 98, 2018} \\[1em]
+    Replication probability $\propto$ Aperture angle \textcolor{red}{\bf $\theta_i$}
+    % depends on the \textcolor{gray}{empty space} \\
+    % bridging its position at the colony and  \\
+    % the outer medium of the culture
+  \end{center}
+
+\bigskip
+  \begin{center}
+    \begin{minipage}{0.4\textwidth}
+      \begin{center}
+	\textcolor{gray}{\tiny Microscopic world}
+
+	\includegraphics[scale=0.2]{figs/Eden-Mechanism.png}
+	\bigskip
+
+	\only<2->{Some rules}
+      \end{center}
+    \end{minipage}
+    \hspace{2em}
+    $\Rightarrow$
+    \begin{minipage}{0.4\textwidth}
+      \begin{center}
+	\textcolor{gray}{\tiny Macroscopic world}
+	\medskip
+
+	\includegraphics[scale=0.2]{figs/Eden-Simulation-a.png}
+
+	\only<3->{\alert{Universal object -- KPZ!}}
+      \end{center}
+    \end{minipage}
+  \end{center}
+
+\small \vfill \pause \pause \pause
+
+  \begin{align}
+    \tag{KPZ}
+    \dfrac{\partial}{\partial t} h(t,x) = \frac{1}{2} \Delta h(t,x) + \frac{\lambda}{2} \left(\nabla h\right)^2 +\textcolor{contrast_color_1}{\dot{W}(t,x)}
+  \end{align}
+\end{frame}
 \begin{frame}[fragile] % Surface growth -- DMS
   \frametitle{Study of growing interfaces in a thin film \\
     \small --- Convection of nematic liquid crystal \footnote{
@@ -746,29 +794,31 @@
     \end{itemize}
   \end{minipage}
 \end{frame}
-\begin{frame}<3->[fragile,t] % Thank you and references
+\begin{frame}<4->[fragile,t] % Thank you and references
   \vfill
 
  \begin{center}
    \huge
 
-   Thank you for your \\
-   listening and participating~!
+   Thank you~!
 
  \end{center}
  \vfill
 
  {\noindent \bf References:}\\
  \begin{itemize}
-   \item Persi Diaconis and Brian Skyrms (2017). \textit{The great ideas about chance.} Princeton
-     University Press.
-   \item Deborah J. Bennett (1998). \textit{Randomness.} Harvard University Press.
-   \item John D. McGervey (1986). \textit{Probabilities in everyday life}. Nelson Hall Publishers.
-   \item Ya. B. Zeldovich, A. A. Ruzmaikin, and D. D. Sokoloff (1987). \textit{The almighty chance}.
-     World Scientific.
+   \item \textcolor{green}{P. Diaconis} and \textcolor{green}{B. Skyrms} (2017). \textit{The great
+     ideas about chance.} Princeton University Press.
+   \item \textcolor{green}{Deborah J. Bennett} (1998). \textit{Randomness.} Harvard University
+     Press.
+   \item \textcolor{green}{John D. McGervey} (1986). \textit{Probabilities in everyday life}. Nelson
+     Hall Publishers.
+   \item \textcolor{green}{Ya. B. Zeldovich}, \textcolor{green}{A. A. Ruzmaikin}, and
+     \textcolor{green}{D. D. Sokoloff} (1987). \textit{The almighty chance}. World Scientific.
  \end{itemize}
 
 \end{frame}
+\section{Gallery of AI (\textcolor{magenta}{Midjourney}) generated images}
 \begin{frame}[fragile,t] % COMENTS
   \frametitle{Chaotic stochastic heat flow on a torus...}
   \begin{center}
