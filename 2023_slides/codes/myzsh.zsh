@@ -28,3 +28,5 @@ SHE-Interval-Animation() {
   mpv  "$timestemp"_SHE-Lambda_2.gif &
   # mpv  "$timestemp"_SHE-Lambda_3.gif &
 }
+
+alias help="cat myzsh.zsh"
