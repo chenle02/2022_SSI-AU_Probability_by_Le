@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10206799.svg)](https://doi.org/10.5281/zenodo.10206799)
+
 # Summer Science Institute at Auburn
 ## Topic on Probability
 * Contribution by Le Chen
@@ -11,7 +13,25 @@
   advanced than what is typically taught in a public or private high school environment.
 * For more information regarding Summer Science Institute please contact Mary Lou Ewald,
   [ewaldml@auburn.edu](mailto:ewaldml@auburn.edu) by the College of Sciences and Mathematics
+* We hope that the resources have been supportive in your teaching or studying.
+  We are sincerely grateful for any form of acknowledgment you might extend.
+  Should you wish to mention this work, please feel free to use the following
+  BibTeX entry. Your support in recognizing the effort put into compiling and
+  maintaining this repository is much appreciated.
 
+  * Le Chen (2023) “Probability: Summer Science Institute at Auburn”. GitHub & Zenodo. https://doi.org/10.5281/zenodo.10206799
+
+```
+@misc{chen:23:statistics,
+  author        = {Le Chen},
+  title         = {Probability: Summer Science Institute at Auburn},
+  month         = {nov},
+  year          = {2023},
+  publisher     = {GitHub \& Zenodo},
+  journal       = {GitHub repository},
+  doi           = {10.5281/zenodo.10206720},
+  url           = {https://doi.org/10.5281/zenodo.10206799}
+}
 # License
 
 [CC-BY-SA-4.0](./LICENSE)
