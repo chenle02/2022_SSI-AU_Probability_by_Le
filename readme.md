@@ -22,16 +22,18 @@
   * Le Chen (2023) “Probability: Summer Science Institute at Auburn”. GitHub & Zenodo. https://doi.org/10.5281/zenodo.10206799
 
 ```
-@misc{chen:23:statistics,
+@misc{chen:23:probability,
   author        = {Le Chen},
   title         = {Probability: Summer Science Institute at Auburn},
   month         = {nov},
   year          = {2023},
   publisher     = {GitHub \& Zenodo},
   journal       = {GitHub repository},
-  doi           = {10.5281/zenodo.10206720},
+  doi           = {10.5281/zenodo.10206799},
   url           = {https://doi.org/10.5281/zenodo.10206799}
 }
+```
+
 # License
 
 [CC-BY-SA-4.0](./LICENSE)
