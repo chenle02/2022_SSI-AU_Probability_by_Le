@@ -25,7 +25,7 @@
 ```
 @misc{chen:23:probability,
   author        = {Le Chen},
-  title         = {Probability: Summer Science Institute at Auburn},
+  title         = {Probability: Summer Science Institute at {Auburn}},
   month         = {nov},
   year          = {2023},
   publisher     = {GitHub \& Zenodo},
