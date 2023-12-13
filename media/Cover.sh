@@ -14,4 +14,6 @@ then
 fi
 
 
-pdftoppm -png -f 1 -r 600 -singlefile ../2023_slides/2023_AU-SSI_Probability_Le.pdf Cover
+pdftoppm -png -f 1 -r 600 -singlefile ../2023_slides/2023_AU-SSI_Probability_Le.pdf  2023_AU-SSI_Probability_Slides
+pdftoppm -png -f 1 -r 600 -singlefile ../2022_slides/2022_AU-SSI_Invitation_Probability_Le.pdf  2022_AU-SSI_Probability_Slides
+
