@@ -7,6 +7,7 @@
 * Contribution by Le Chen
   * [Year 2022](Year_2022.md)
   * [Year 2023](Year_2023.md)
+  * [Year 2024](Year_2024.md)
 * Organized by the College of Sciences and Mathematics, Auburn University
 * Official website https://www.auburn.edu/cosam//outreach/stem_outreach/programs/SSI/index.htm 
 * This summer science program for outstanding 11th – 12th grade students interested in science and
