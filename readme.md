@@ -1,4 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10206799.svg)](https://doi.org/10.5281/zenodo.10206799)
+![Cover](./media/2024_AU-SSI_Probability_Slides.png)
 ![Cover](./media/2023_AU-SSI_Probability_Slides.png)
 ![Cover](./media/2022_AU-SSI_Probability_Slides.png)
 
