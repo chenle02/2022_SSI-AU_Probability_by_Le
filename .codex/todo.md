@@ -2,10 +2,10 @@
  This file collects suggested improvements for the repository.
 
  ## 1. Rename and polish top-level README
- - Rename `readme.md` to `README.md`.
- - Add a clear "What's in this repo?" section or table of contents with links to each year's materials.
- - Include build instructions for `.tex` slide decks (dependencies, build commands).
- - Link to per-year folders and explain their contents (slides, code, data, photos).
+ - [Y] Rename `readme.md` to `README.md`.
+ - [Y] Add a clear "What's in this repo?" section or table of contents with links to each year's materials.
+ - [N] Include build instructions for `.tex` slide decks (dependencies, build commands).
+ - [Y] Link to per-year folders and explain their contents (slides, code, data, photos).
 
  ## 2. Organize directories consistently
  - Group by year: `2022/`, `2023/`, `2024/`.
