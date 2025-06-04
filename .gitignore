@@ -1,22 +1,74 @@
-*.aux
-*.toc
-*.bcf
-*.xml
-*.snm
-*.blg
+# Git ignore rules for this repository
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+*.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+nose*.xml
+
+# Translations
+*.mo
+*.pot
+
+# Logs and databases
 *.log
-*.out
-*.synctex.gz
+*.sql
+*.sqlite
+
+# LaTeX build files
+*.aux
 *.bbl
+*.blg
 *.fdb_latexmk
 *.fls
+*.out
+*.lof
+*.lot
+*.toc
 *.nav
-*.vrb
-*.sc
-test.sh
+*.snm
+*.synctex.gz
+*.xdv
 
-slides/codes/a.sc
+# Editor backup files
+*~
+*.swp
+*.swo
+.*.swp
 
-slides/codes/test.csv
-media/myzsh.zsh
-myzsh.zsh
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
