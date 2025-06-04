@@ -21,7 +21,7 @@
 """
 from datetime import date, timedelta
 import random
-import sys
+import argparse
 import csv
 
 
@@ -55,12 +55,19 @@ def GenDOB(NumStudents, CSVFile):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Using the default number 46.")
-        NumStudents = 46
-    else:
-        NumStudents = int(sys.argv[1])
-    GenDOB(NumStudents, "Output.csv")
+    parser = argparse.ArgumentParser(
+        description="Generate random dates of birth (DOBs)."
+    )
+    parser.add_argument(
+        "-n", "--num-students", type=int, default=46,
+        help="Number of students (default: 46)"
+    )
+    parser.add_argument(
+        "-o", "--output", default="Output.csv",
+        help="Output CSV filename (default: Output.csv)"
+    )
+    args = parser.parse_args()
+    GenDOB(args.num_students, args.output)
 
 
 if __name__ == "__main__":

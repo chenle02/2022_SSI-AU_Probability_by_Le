@@ -16,7 +16,7 @@
 """
 
 import csv
-import sys
+import argparse
 
 
 def CheckMatchingDOBs(CSVFile):
@@ -51,14 +51,16 @@ def CheckMatchingDOBs(CSVFile):
 
 
 def main():
-    # Parse the input CSV filename.
-    if len(sys.argv) < 2:
-        CSVFile = "DOB.csv"
-        print("Checking the test CSV file: DOB_Test.csv.\n")
-    else:
-        CSVFile = sys.argv[1]
-
-    print(f"\nFound {CheckMatchingDOBs(CSVFile)} pairs of matching birthdays.")
+    parser = argparse.ArgumentParser(
+        description="Check for matching dates of birth in a CSV file."
+    )
+    parser.add_argument(
+        "csvfile", nargs="?", default="DOB.csv",
+        help="Input CSV file (default: DOB.csv)"
+    )
+    args = parser.parse_args()
+    count = CheckMatchingDOBs(args.csvfile)
+    print(f"\nFound {count} pairs of matching birthdays.")
 
 
 if __name__ == "__main__":

@@ -9,15 +9,22 @@
 
  ## Table of Contents
 
- 1. [What’s in this repo?](#whats-in-this-repo)
- 2. [Repository Structure](#repository-structure)
- 3. [Building the Slides](#building-the-slides)
- 4. [Per-Year Materials](#per-year-materials)
- 5. [Contributing](#contributing)
- 6. [License](#license)
+1. [What’s in this repo?](#whats-in-this-repo)
+2. [Repository Structure](#repository-structure)
+3. [Setup](#setup)
+4. [Building the Slides](#building-the-slides)
+5. [Per-Year Materials](#per-year-materials)
+6. [Contributing](#contributing)
+7. [License](#license)
 
- ## What’s in this repo?
+## Setup
 
+Install Python dependencies for simulation and plotting:
+```bash
+pip install -r requirements.txt
+```
+  
+## What’s in this repo?
  - Slide decks (PDF & TeX source) for each year’s presentation.
  - Python code examples and simulation scripts.
  - Data files, figures, and photos used in demonstrations.
