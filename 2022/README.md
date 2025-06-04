@@ -23,18 +23,25 @@
 * June 8th, 2022, from 5:30pm -- 6:30pm.
 * [Sciences Center Auditorium Building](https://calendar.auburn.edu/sciences_center_auditorium_bldg_603)
 * Lecturer: [Le Chen](http://webhome.auburn.edu/~lzc0090/)
-* Slides are here [2022_AU-SSI_Invitation_Probability_Le.pdf](./2022_slides/2022_AU-SSI_Invitation_Probability_Le.pdf).
+* Slides are here [2022_AU-SSI_Invitation_Probability_Le.pdf](./slides/2022_AU-SSI_Invitation_Probability_Le.pdf).
 
 ## Procedures
 * Each one is assigned an ID number.
 * Present the slides.
 * Collecting the DOB via the ID number using [sc-im](https://github.com/andmarti1424/sc-im):
+```bash
+sc-im ./data/DOB.csv
 ```
-sc-im ./2022_slides/codes/DOB.csv
+* Run [Checking.py](./code/Checking.py) to check the matching DOBs from the class:
+```bash
+python3 code/Checking.py data/DOB.csv
 ```
-* Run [Checking.py](./2022_slides/codes/Checking.py) to check the matching DOBs from the class.
-* Run [GenDOB.py](./2022_slides/codes/GenDOB.py) to generate random DOBs uniformly distributed in years
-  2005 -- 2007.
-* Run [BatchTest.py](./2022_slides/codes/BatchTest.py) to generate random classes and to see if one can
-  recover the theoretical matching probability.
+* Run [GenDOB.py](./code/GenDOB.py) to generate random DOBs uniformly distributed in years 2005–2007:
+```bash
+python3 code/GenDOB.py
+```
+* Run [BatchTest.py](./code/BatchTest.py) to generate random class data and estimate matching probabilities:
+```bash
+python3 code/BatchTest.py
+```
 

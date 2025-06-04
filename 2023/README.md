@@ -1,12 +1,12 @@
-![Group photo](./2023_slides/photos/2023_AU-SSI_Probability_Group.JPG)
+![Group photo](./photos/2023_AU-SSI_Probability_Group.JPG)
 # Year 2023, Summer Science Institute (SSI) at Auburn University
 * Presented by the College of Sciences and Mathematics
 * Official website https://www.auburn.edu/cosam//outreach/stem_outreach/programs/SSI/index.htm
 * June 4-10, 2023
 
-1. Simulation codes can be found here: [./2023_slides/codes](./2023_slides/codes)
-2. The presentation is here [2023_slides 2023_AU SSI_Probability_Le pdf](./2023_slides/2023_AU-SSI_Probability_Le.pdf)
-3. Some event photos here: [photos](2023_slides/photos/photos.md)
+1. Simulation codes can be found here: [`code/`](./code/)
+2. The presentation is here: [`slides/2023_AU-SSI_Probability_Le.pdf`](./slides/2023_AU-SSI_Probability_Le.pdf)
+3. Some event photos here: [photos](./photos/photos.md)
 
 ## Talk
 * Title: Embracing Randomness: the Intriguing Role of Chance in Science
@@ -24,7 +24,7 @@ within it.
 ```
 * Classroom: SCC 115
 * Date and Time: June 6th, Tuesday, 16:00-17:30
-* [Final report](./2023_slides/2023_SSI_Program_Report_Final.pdf).
+* [Final report](./slides/2023_SSI_Program_Report_Final.pdf).
 # License
 
-[CC-BY-SA-4.0](./LICENSE)
+[CC-BY-SA-4.0](../LICENSE)

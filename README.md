@@ -27,14 +27,19 @@
 
  ```
  .
- ├── 2022_slides/       # TeX source, compiled PDF, code, and figures for 2022
- ├── 2023_slides/       # TeX source, compiled PDF, code, figures, and photos for 2023
- ├── media/             # Covers and images for each year
- ├── Year_2022.md       # Overview, attendees, and instructions for 2022
- ├── Year_2023.md       # Overview, talk abstract, and report for 2023
- ├── Year_2024.md       # Overview and slide link for 2024
- ├── LICENSE            # CC-BY-SA-4.0 license
- └── README.md          # You are here
+ ├── 2022/              # materials for Year 2022
+ │   ├── slides/        # TeX source, compiled PDF, and slide figures
+ │   ├── code/          # Python scripts for demos and data generation
+ │   └── data/          # CSV and other data files used in code
+ ├── 2023/              # materials for Year 2023
+ │   ├── slides/        # TeX source, compiled PDF, and slide figures
+ │   ├── code/          # Python scripts and assets for simulations
+ │   ├── figs/          # figures for slides
+ │   └── photos/        # event photos and related assets
+ ├── 2024/              # materials for Year 2024
+ │   └── README.md      # overview and link to online slides
+ ├── media/             # common assets (cover images)
+ └── LICENSE            # CC-BY-SA-4.0 license
  ```
 
  ## Building the Slides
@@ -57,25 +62,26 @@
 
  ## Per-Year Materials
 
- ### Year 2022
- - **Slides:** `2022_slides/2022_AU-SSI_Invitation_Probability_Le.pdf`
- - **Source:** TeX files and style in `2022_slides/`
- - **Code & data:** `2022_slides/codes/`
- - **Figures:** `2022_slides/figs/`
- - **Overview:** [Year_2022.md](Year_2022.md)
+### Year 2022
+- **Slides:** `2022/slides/2022_AU-SSI_Invitation_Probability_Le.pdf`
+- **Source:** in `2022/slides/`
+- **Code:** `2022/code/`
+- **Data:** `2022/data/`
+- **Figures:** `2022/slides/figs/`
+- **Overview:** [2022/](2022/)
 
- ### Year 2023
- - **Slides:** `2023_slides/2023_AU-SSI_Probability_Le.pdf`
- - **Source:** TeX files in `2023_slides/`
- - **Code:** `2023_slides/codes/`
- - **Figures:** `2023_slides/figs/`
- - **Photos:** `2023_slides/photos/`
- - **Report:** `2023_slides/2023_SSI_Program_Report_Final.pdf`
- - **Overview:** [Year_2023.md](Year_2023.md)
+### Year 2023
+- **Slides:** `2023/slides/2023_AU-SSI_Probability_Le.pdf`
+- **Source:** in `2023/slides/`
+- **Code & assets:** `2023/code/`
+- **Figures:** `2023/figs/`
+- **Photos:** `2023/photos/`
+- **Report:** `2023/slides/2023_SSI_Program_Report_Final.pdf`
+- **Overview:** [2023/](2023/)
 
- ### Year 2024
- - **Slides:** Hosted online at [webhome.auburn.edu/~lzc0090/AU-SSI_2024](http://webhome.auburn.edu/~lzc0090/AU-SSI_2024/#/)
- - **Overview:** [Year_2024.md](Year_2024.md)
+### Year 2024
+- **Slides:** Hosted online at [webhome.auburn.edu/~lzc0090/AU-SSI_2024](http://webhome.auburn.edu/~lzc0090/AU-SSI_2024/#/)
+- **Overview:** [2024/](2024/)
 
  ## Contributing
 

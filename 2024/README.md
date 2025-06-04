@@ -1,4 +1,4 @@
-![Group photo](./media/AU-SSI_Probability_2024.jpg)
+![Cover](../media/AU-SSI_Probability_2024.jpg)
 # Year 2024, Summer Science Institute (SSI) at Auburn University
 * Presented by the College of Sciences and Mathematics
 * Official website https://www.auburn.edu/cosam//outreach/stem_outreach/programs/SSI/index.htm
@@ -29,4 +29,4 @@ of mathematics and physics.
 
 # License
 
-[CC-BY-SA-4.0](./LICENSE)
+[CC-BY-SA-4.0](../LICENSE)
