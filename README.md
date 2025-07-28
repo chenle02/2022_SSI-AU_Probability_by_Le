@@ -94,6 +94,10 @@ pip install -r requirements.txt
 
  Contributions (typo fixes, code enhancements, new demos) are welcome! Please see `CONTRIBUTING.md` for guidelines.
 
- ## License
+### Year 2024
+
+-- Separate repository for 2025 slides: [AU-SSI_2025](https://github.com/chenle02/AU-SSI_Probability_2025) 
+
+## License
 
  This repository is licensed under [CC-BY-SA-4.0](LICENSE). See the LICENSE file for full details.
