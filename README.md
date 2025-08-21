@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
  Contributions (typo fixes, code enhancements, new demos) are welcome! Please see `CONTRIBUTING.md` for guidelines.
 
-### Year 2024
+### Year 2025
 
 -- Separate repository for 2025 slides: [AU-SSI_2025](https://github.com/chenle02/AU-SSI_Probability_2025) 
 
